@@ -42,4 +42,15 @@ public class Unit : MonoBehaviour
     }
 
     // TODO: implement damaging
+    // for now simple collision
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Coll");
+        if (!CompareTag(collision.gameObject.tag)) // for now every other object is enemy
+        {
+            Debug.Log("HitEnemy");
+            // TODO: implement killing logic
+
+        }
+    }
 }

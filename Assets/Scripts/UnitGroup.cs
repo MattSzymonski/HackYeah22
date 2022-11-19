@@ -52,6 +52,7 @@ public class UnitGroup : MonoBehaviour
             newSquadMember.transform.parent = army;
             newSquadMember.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, army.position.z);
             //newSquadMember.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 0f, 0f);
+            newSquadMember.tag = gameObject.tag;
             squadMembers.Add(newSquadMember);
             currentSpawnCount++;
         }
