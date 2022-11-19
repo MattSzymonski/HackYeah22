@@ -32,28 +32,33 @@ public class UnitGroup : MonoBehaviour
     public bool isEnemy = false;
 
     public Mighty.MightyTimer combatExitTimer;
+    public bool combatExitTimerStarted = false;
 
     // Start is called before the first frame update
     void Start()
     {
         army = gameObject.transform.Find("Army");
         moveTarget = GetComponentInChildren<FlagController>();
-        combatExitTimer = new Mighty.MightyTimer("ExitingCombatTimer", combatExitProtectionTime, 1.0f, false, true);
+        combatExitTimer = Mighty.MightyTimersManager.Instance.CreateTimer("ExitingCombatTimer", combatExitProtectionTime, 1.0f, false, true);
         Spawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (combatExitTimer.finished)
+        if (combatExitTimer.finished && combatExitTimerStarted)
         {
             exitingCombat = false;
+            inCombat = false;
+            combatExitTimerStarted = false;
+            Debug.Log("Exited Combat");
         }
-
-        if (exitingCombat)
+        else if (exitingCombat && !combatExitTimerStarted)
         {
             combatExitTimer.RestartTimer();
             combatExitTimer.PlayTimer();
+            Debug.Log("Exiting Combat!");
+            combatExitTimerStarted = true;
         }
 
         if (selected)

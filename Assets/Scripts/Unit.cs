@@ -27,12 +27,18 @@ public class Unit : MonoBehaviour
 
     private void Update()
     {
+        if (unitGroup.exitingCombat)
+        {
+            CombatExitingLogic();
+            return;
+        }
+
         if (unitGroup.inCombat && !unitGroup.exitingCombat)
         {
             // damage
             CombatLogic();
         }
-        else
+        else if (!unitGroup.exitingCombat)
         {
             FlagFollowLogic();
         }
@@ -45,7 +51,7 @@ public class Unit : MonoBehaviour
         if (!chosenEnemy)
         {
             Debug.Log("Unit " + gameObject.name + " does not have an enemy assigned");
-            return; // TODO: for now
+            return; // TODO: for now they just stop
         }
         
         Debug.Log("Unit " + gameObject.name + " enemy: " + chosenEnemy.name);
@@ -56,11 +62,13 @@ public class Unit : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, chosenEnemy.transform.position, step);
 
         // check if we pressed mouse in combat, then perform FlagFollowLogic (TODO: enemy will still be damaging us?) and trigger this unAttackable for a time
-        if (unitGroup.selected)
+        if (unitGroup.selected && !unitGroup.exitingCombat)
         {
             unitGroup.inCombat = false;
             unitGroup.exitingCombat = true;
         }
+        
+        // if no more enemies also exit combat
 
     }
 
@@ -92,6 +100,12 @@ public class Unit : MonoBehaviour
             if (!enemyUnit.chosenEnemy)
                 enemyUnit.chosenEnemy = this.gameObject;
         }
+    }
+
+    private void CombatExitingLogic()
+    {
+        var step = speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, formationSlot.position, step);
     }
 
     /*
