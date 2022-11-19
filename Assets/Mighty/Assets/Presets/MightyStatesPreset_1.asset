@@ -18,49 +18,39 @@ MonoBehaviour:
 
     Contains 5 game
     states: MainMenu, Settings, Playing, Pause, GameOver'
-  startingGameStateName: MainMenu
+  startingGameStateName: Map
   gameStates:
   - name: MainMenu
     transitionStage: 1
     enterGameStateNames:
-    - Playing
     - GameOver
-    - Options
-    - Pause
     exitGameStateNames:
-    - Playing
-    - Options
-  - name: Playing
+    - Map
+  - name: Map
     transitionStage: 1
     enterGameStateNames:
     - MainMenu
-    - GameOver
-    - Pause
+    - Village
+    - Battle
     exitGameStateNames:
-    - MainMenu
+    - Village
+    - Battle
+  - name: Village
+    transitionStage: 1
+    enterGameStateNames:
+    - Map
+    exitGameStateNames:
+    - Map
+  - name: Battle
+    transitionStage: 1
+    enterGameStateNames:
+    - Map
+    exitGameStateNames:
     - GameOver
-    - Pause
+    - Map
   - name: GameOver
     transitionStage: 1
     enterGameStateNames:
-    - Playing
+    - Battle
     exitGameStateNames:
     - MainMenu
-    - Playing
-  - name: Options
-    transitionStage: 1
-    enterGameStateNames:
-    - MainMenu
-    - Pause
-    exitGameStateNames:
-    - MainMenu
-    - Pause
-  - name: Pause
-    transitionStage: 1
-    enterGameStateNames:
-    - Playing
-    - Options
-    exitGameStateNames:
-    - Playing
-    - MainMenu
-    - Options
