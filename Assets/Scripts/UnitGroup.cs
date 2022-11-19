@@ -8,6 +8,7 @@ public class UnitGroup : MonoBehaviour
 
     // Movement controls
     public float speed = 5f;
+    public float rotationSpeed = 0.5f;
 
     // Spawn attributes
     //public float spawnRadius = 5.0f;
@@ -42,6 +43,16 @@ public class UnitGroup : MonoBehaviour
         }
         var step = speed * Time.deltaTime;
         formation.transform.position = Vector2.MoveTowards(formation.transform.position, moveTarget.transform.position, step);
+        // rotation
+        //Quaternion targetRotation = Quaternion.LookRotation(moveTarget.transform.position);
+        //formation.transform.rotation = Quaternion.RotateTowards(formation.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+
+        if (formation.transform.position.x != moveTarget.transform.position.x && formation.transform.position.y != moveTarget.transform.position.y)
+        {
+            Vector3 relativePos = moveTarget.transform.position - formation.transform.position;
+            float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg + -90.0f;
+            formation.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
         //rb.velocity = new Vector3(dest.x, dest.y, 0);
 
         // update UnitGroups status
