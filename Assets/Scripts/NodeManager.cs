@@ -21,6 +21,8 @@ public class NodeManager : MonoBehaviour
 
     public Player player;
 
+    private PotopManager potopManager;
+
     void Start()
     {
         foreach (Transform child in transform)
@@ -38,6 +40,8 @@ public class NodeManager : MonoBehaviour
         }
         currentSelectedNode = NodeLevels[0].transform.GetChild(0).gameObject.GetComponent<Node>();
         PlayerMarker.transform.position = currentSelectedNode.transform.position;
+
+        potopManager = GameObject.Find("PotopManager").GetComponent<PotopManager>();
     }
 
     // Update is called once per frame
@@ -85,6 +89,7 @@ public class NodeManager : MonoBehaviour
         if (movesMade % movesForWaveProgression == 0)
         {
             waveProgression++;
+            potopManager.AdvanceWave();
             // TODO CHECK IF WAVE PROGRESSION IS EQUAL TO TOTAL LEVELS
 
             foreach(Transform node in NodeLevels[waveProgression].transform)

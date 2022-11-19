@@ -88,4 +88,9 @@ public class MainGameManager : MightyGameManager
 
         yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel(exitingGameState + "Panel", false, true));
     }
+
+    public void TriggerLosingBattle()
+    {
+
+    }
 }
