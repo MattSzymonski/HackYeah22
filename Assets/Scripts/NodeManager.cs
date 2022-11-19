@@ -1,4 +1,5 @@
 using System.Collections;
+using Mighty;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -46,32 +47,35 @@ public class NodeManager : MonoBehaviour
         {
             PlayerMarker.transform.position = Vector3.Lerp(PlayerMarker.transform.position, currentSelectedNode.transform.position, speed*Time.deltaTime);
         }
-        if (Input.GetMouseButtonDown(0))
+        if (MightyGameBrain.Instance.currentGameStateName != "Village")
         {
-            //Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            //if(circleCollider.OverlapPoint(mousePos))
-            //{
-            //    Debug.Log("Clicked on node");
-            //}
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.GetRayIntersection(ray,Mathf.Infinity);
-                
-            if(hit.collider != null)
+            if (Input.GetMouseButtonDown(0))
             {
-                Node clickedNode = hit.collider.transform.gameObject.GetComponent<Node>();
-                if (currentSelectedNode.neighbours.Contains(clickedNode))
-                {
-                    // Check if current node is invaded or not
-                    if (clickedNode.invaded == false)
-                    {
-                        currentSelectedNode = clickedNode;
-                        // move player marker
-                        movesMade++;
-                        PlayerMarkerMoved();
-                    }
-                }
+                //Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+                //if(circleCollider.OverlapPoint(mousePos))
+                //{
+                //    Debug.Log("Clicked on node");
+                //}
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.GetRayIntersection(ray,Mathf.Infinity);
+                    
+                if(hit.collider != null)
+                {
+                    Node clickedNode = hit.collider.transform.gameObject.GetComponent<Node>();
+                    if (currentSelectedNode.neighbours.Contains(clickedNode))
+                    {
+                        // Check if current node is invaded or not
+                        if (clickedNode.invaded == false)
+                        {
+                            currentSelectedNode = clickedNode;
+                            // move player marker
+                            movesMade++;
+                            PlayerMarkerMoved();
+                        }
+                    }
+
+                }
             }
         }
     }
@@ -90,7 +94,12 @@ public class NodeManager : MonoBehaviour
             }
         }
 
+        // If village exists, enter village
         Village village = currentSelectedNode.gameObject.GetComponent<Village>();
         village?.EnterVillage(player);
+
+        // If Battle exists, enter Battle
+        Battle battle = currentSelectedNode.gameObject.GetComponent<Battle>();
+        battle?.EnterBattle(player);
     }
 }
