@@ -40,4 +40,6 @@ public class Unit : MonoBehaviour
 
         // TODO: deselect all other guys
     }
+
+    // TODO: implement damaging
 }
