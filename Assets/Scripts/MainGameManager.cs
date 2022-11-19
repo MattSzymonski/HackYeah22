@@ -42,6 +42,11 @@ public class MainGameManager : MightyGameManager
        
     }
 
+    public void CloseInfoPanel()
+    {
+        MightyUIManager.Instance.ToggleUIPanel("InfoPanel", false, false);
+    }
+
     // --- MightyGameBrain callbacks ---
 
     // This is called by MightyGameBrain on every game state enter (you decide to handle it or not)

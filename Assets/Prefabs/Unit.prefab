@@ -64,7 +64,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  enemyDetectionRadius: 2
   inCombat: 0
+  formationSlot: {fileID: 0}
+  chosenEnemy: {fileID: 0}
 --- !u!212 &1165071944323686330
 SpriteRenderer:
   m_ObjectHideFlags: 0

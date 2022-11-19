@@ -10,6 +10,8 @@ public class UnitGroup : MonoBehaviour
     public float speed = 5f;
     public float rotationSpeed = 0.5f;
 
+    public float combatExitProtectionTime = 2.0f;
+
     // Spawn attributes
     //public float spawnRadius = 5.0f;
     public int spawnCount = 10;
@@ -25,18 +27,40 @@ public class UnitGroup : MonoBehaviour
     public FlagController moveTarget;
 
     public bool selected = false;
+    public bool inCombat = false;
+    public bool exitingCombat = false;
+    public bool isEnemy = false;
+
+    public Mighty.MightyTimer combatExitTimer;
+    public bool combatExitTimerStarted = false;
 
     // Start is called before the first frame update
     void Start()
     {
         army = gameObject.transform.Find("Army");
         moveTarget = GetComponentInChildren<FlagController>();
+        combatExitTimer = Mighty.MightyTimersManager.Instance.CreateTimer("ExitingCombatTimer", combatExitProtectionTime, 1.0f, false, true);
         Spawn();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (combatExitTimer.finished && combatExitTimerStarted)
+        {
+            exitingCombat = false;
+            inCombat = false;
+            combatExitTimerStarted = false;
+            Debug.Log("Exited Combat");
+        }
+        else if (exitingCombat && !combatExitTimerStarted)
+        {
+            combatExitTimer.RestartTimer();
+            combatExitTimer.PlayTimer();
+            Debug.Log("Exiting Combat!");
+            combatExitTimerStarted = true;
+        }
+
         if (selected)
         {
             //Debug.Log("Selected!");
@@ -65,7 +89,10 @@ public class UnitGroup : MonoBehaviour
             GameObject newSquadMember = Instantiate(squadMemberPrefab, formationTrans.position, Quaternion.identity) as GameObject;
             newSquadMember.transform.parent = army;
             newSquadMember.transform.position = new Vector3(formationTrans.position.x, formationTrans.position.y, army.position.z);
+            newSquadMember.layer = Utils.ENEMY_LAYER;
             newSquadMember.GetComponent<Unit>().formationSlot = formationTrans;
+            if (isEnemy)
+                newSquadMember.tag = Utils.ENEMY_TAG;
         }
 
         /* TOOD: bannerman or just a flag to be drageed around

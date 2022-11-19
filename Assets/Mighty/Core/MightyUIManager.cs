@@ -140,6 +140,20 @@ namespace Mighty
             }
         }
 
+        public void CloseUIPanelForce(string uiPanelName)
+        {
+            MightyUIPanel uiPanel;
+            if (uiPanelMap.TryGetValue(uiPanelName, out uiPanel))
+            {
+                uiPanel.TriggerTransition("Open", false);
+                uiPanel.active = false;
+            }
+            else
+            {
+                Debug.LogError(string.Format("[MightyUIManager] Cannot toggle UI panel \"{0}\", such UI panel does not exist", uiPanelName));
+            }
+        }
+
         public IEnumerator ToggleUIPanel(string uiPanelName, bool open, bool wait = false)
         {
             MightyUIPanel uiPanel;

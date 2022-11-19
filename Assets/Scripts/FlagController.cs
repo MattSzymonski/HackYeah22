@@ -37,6 +37,7 @@ public class FlagController : MonoBehaviour
     {
         if (!unitGroup.selected)
             return;
+
         Cursor.visible = true;
     }
 
