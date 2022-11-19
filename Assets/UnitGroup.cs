@@ -36,9 +36,9 @@ public class UnitGroup : MonoBehaviour
         while (currentSpawnCount < spawnCount)
         {
             Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
-            spawnPosition.z = transform.position.z;
             GameObject newSquadMember = Instantiate(squadMemberPrefab, spawnPosition, Quaternion.identity) as GameObject;
             newSquadMember.transform.parent = gameObject.transform;
+            newSquadMember.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, transform.position.z);
             squadMembers.Add(newSquadMember);
             currentSpawnCount++;
         }
