@@ -17,6 +17,9 @@ public class NodeManager : MonoBehaviour
     public GameObject PlayerMarker;
     public float speed = 0.2f;
     // Start is called before the first frame update
+
+    public Player player;
+
     void Start()
     {
         foreach (Transform child in transform)
@@ -86,5 +89,8 @@ public class NodeManager : MonoBehaviour
                 node.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
             }
         }
+
+        Village village = currentSelectedNode.gameObject.GetComponent<Village>();
+        village?.EnterVillage(player);
     }
 }
