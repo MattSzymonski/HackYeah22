@@ -397,6 +397,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 6262775410447495857, guid: 1799d5c2506c7414d91ae6299d467b39,
+        type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6262775410447495870, guid: 1799d5c2506c7414d91ae6299d467b39,
         type: 3}
       propertyPath: m_RootOrder
