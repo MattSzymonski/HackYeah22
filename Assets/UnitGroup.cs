@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class UnitGroup : MonoBehaviour
 {
+    private float fixedZ;
+
+    // Movement controls
+    public float speed = 5f;
+
     // Spawn attributes
     public float spawnRadius = 5.0f;
     public int spawnCount = 5;
@@ -11,6 +16,8 @@ public class UnitGroup : MonoBehaviour
     public int currentSpawnCount = 0;
     public List<GameObject> squadMembers = new List<GameObject>(); // TODO: randomize
     public GameObject squadMemberPrefab;
+    
+    private Transform army;
 
     public FlagController moveTarget;
 
@@ -19,8 +26,9 @@ public class UnitGroup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Spawn();
+        army = gameObject.transform.Find("Army");
         moveTarget = GetComponentInChildren<FlagController>();
+        Spawn();
     }
 
     // Update is called once per frame
@@ -28,17 +36,22 @@ public class UnitGroup : MonoBehaviour
     {
         if (selected)
         {
-            Debug.Log("Selected!");
+            //Debug.Log("Selected!");
         }
+        var step = speed * Time.deltaTime;
+        Vector3 dest = Vector3.MoveTowards(army.position, moveTarget.transform.position, step);
+        army.position = new Vector3(dest.x, dest.y, fixedZ);
+        //rb.velocity = new Vector3(dest.x, dest.y, 0);
     }
     public void Spawn()
     {
         while (currentSpawnCount < spawnCount)
         {
-            Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
+            Vector3 spawnPosition = army.position + Random.insideUnitSphere * spawnRadius;
             GameObject newSquadMember = Instantiate(squadMemberPrefab, spawnPosition, Quaternion.identity) as GameObject;
-            newSquadMember.transform.parent = gameObject.transform;
-            newSquadMember.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, transform.position.z);
+            newSquadMember.transform.parent = army;
+            newSquadMember.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, army.position.z);
+            //newSquadMember.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 0f, 0f);
             squadMembers.Add(newSquadMember);
             currentSpawnCount++;
         }
@@ -53,7 +66,7 @@ public class UnitGroup : MonoBehaviour
 
     void onDrawGizmos()
     {
-        DebugExtension.DebugWireSphere(transform.position, Color.yellow, spawnRadius);
+        DebugExtension.DebugWireSphere(army.position, Color.yellow, spawnRadius);
     }
 
 }

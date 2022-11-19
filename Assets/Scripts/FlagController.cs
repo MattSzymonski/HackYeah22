@@ -52,9 +52,10 @@ public class FlagController : MonoBehaviour
     }
 
     void OnMouseDown()
-    {        
-        if (!unitGroup.selected)
-            return;
+    {
+        unitGroup.selected = true;
+        //if (!unitGroup.selected)
+            //return;
 
         offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
     }
@@ -64,7 +65,8 @@ public class FlagController : MonoBehaviour
         if (!unitGroup.selected)
             return;
 
-        transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, fixedZ)) + offset;
+        Vector3 dst = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)) + offset;
+        transform.position = new Vector3(dst.x, dst.y, fixedZ);
     }
 
     void OnMouseUp()
