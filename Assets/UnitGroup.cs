@@ -2,31 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SquadController : MonoBehaviour
+public class UnitGroup : MonoBehaviour
 {
-    // Movement controls
-    public GameObject movementTarget;
-    public float speed = 5f;
     // Spawn attributes
     public float spawnRadius = 5.0f;
     public int spawnCount = 5;
     public float spawnSpacing = 1.0f;
     public int currentSpawnCount = 0;
-    public List<GameObject> squadMembers = new List<GameObject>();
+    public List<GameObject> squadMembers = new List<GameObject>(); // TODO: randomize
     public GameObject squadMemberPrefab;
+
+    public FlagController moveTarget;
+
+    public bool selected = false;
+
     // Start is called before the first frame update
     void Start()
     {
         Spawn();
+        moveTarget = GetComponentInChildren<FlagController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, movementTarget.transform.position, step);
+        if (selected)
+        {
+            Debug.Log("Selected!");
+        }
     }
-
     public void Spawn()
     {
         while (currentSpawnCount < spawnCount)
@@ -38,10 +42,18 @@ public class SquadController : MonoBehaviour
             squadMembers.Add(newSquadMember);
             currentSpawnCount++;
         }
+
+        /* TOOD: bannerman or just a flag to be drageed around
+        // choose a bannerman (change the sprite)
+        int rand = Random.Range(0, squadMembers.Count + 1);
+        bannerman = squadMembers[rand];
+        //bannerman.GetComponent<Sprite>() // swap it
+        */
     }
 
     void onDrawGizmos()
     {
         DebugExtension.DebugWireSphere(transform.position, Color.yellow, spawnRadius);
     }
+
 }
