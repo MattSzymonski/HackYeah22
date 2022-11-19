@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4502d382f90a35a4883344366413ff5a, type: 3}
+  m_Name: MightyLevelsPreset_1
+  m_EditorClassIdentifier: 
+  info: 'Template of 2 test levels '
+  levels:
+  - name: 1
+    type: 0
+    prefab: {fileID: 2767371537161079883, guid: 7a340ffca2f0d2c47b7518d0e4214e32,
+      type: 3}
+    loadedPrefab: {fileID: 0}
+    sceneName: 
+    loadSceneMode: 0
+    active: 0
+  - name: 2
+    type: 0
+    prefab: {fileID: 4577576172746689680, guid: 5287b24054412154f9be4dfcc92728a4,
+      type: 3}
+    loadedPrefab: {fileID: 0}
+    sceneName: 
+    loadSceneMode: 0
+    active: 0

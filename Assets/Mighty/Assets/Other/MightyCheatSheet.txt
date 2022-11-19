@@ -1,0 +1,148 @@
+// Mighty colors
+{
+    Neon pink
+        1.0, 0.33, 0.565
+        255, 85, 145
+        #FF5591
+    
+    Neon pink light
+        1.0, 0.45, 0.645
+        255, 115, 165
+        #FF73A5
+}
+
+
+// Code Regions
+{
+    #region Gizmos
+    #endregion
+}
+
+
+// Gizmos
+{
+    void OnDrawGizmos()
+    {
+        //Examples:
+        DebugExtension.DrawCircle(transform.position, Vector3.up, Color.yellow, 3);
+        Gizmos.DrawLine(transform.position, transform.position);
+        Gizmos.DrawSphere(transform.position, 1f);
+    }
+}
+
+
+// Instantiate prefabs
+{
+    public GameObject objectPrefab;
+    public List<GameObject> spawnedObjects;
+    GameObject newObject = Instantiate(objectPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+    newObject.transform.parent = this.transform;
+    spawnedObjects.Add(newObject);
+}
+
+
+// Mouse position
+{
+Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // Position in word based on mouse position on screen
+
+}
+
+
+// Reversed for loop
+{
+    for (int i = enemies.Count - 1; i >= 0; i--)
+    {
+        GameObject objToDestroy = enemies[i];
+        enemies.RemoveAt(i);
+        Destroy(objToDestroy);
+    }
+}
+
+// Classic timer
+{
+    float myTimer;
+    float myTime;
+    void Update()
+    {
+        if (myTimer < myTime)
+        {
+            myTimer += 1 * Time.deltaTime;
+        }
+        else
+        {
+            //Do stuff
+            myTimer = 0;
+        }
+    }
+}
+
+
+// Add this before function so it will be clicable in inspector
+{
+    [Button]
+}
+
+
+// Score
+{
+    public float score;
+    score += Time.unscaledDeltaTime; // Seconds
+    scoreText.text = (int)Mathf.Floor(score);
+    score = 0; 
+    scoreText.text = 0; 
+}
+
+
+// Using gamepad triggers as buttons instead of axes
+{
+    bool triggersActivated;
+    float triggerAxis = Input.GetAxis("ControllerAny Triggers");
+    if (triggerAxis != 0)
+    {
+        if (!triggersActivated)
+        {
+            if (triggerAxis > 0f)
+            {
+                Debug.Log("Click R " + triggerAxis); // Call your function here
+                triggersActivated = true;
+            }
+            else if (triggerAxis < 0f)
+            {
+                Debug.Log("Click L " + triggerAxis); // Call your function here
+                triggersActivated = true;
+            }
+        }
+    }
+    else
+    {
+        triggersActivated = false;
+    }
+}
+
+// Using gamepad dpad (X axis - left, right button)
+{
+    bool dpadXActivated;
+    float dpadXAxis = Input.GetAxis("ControllerAny DPad X");
+    if (dpadXAxis != 0)
+    {
+        if (!dpadXActivated)
+        {
+            if (dpadXAxis > 0f)
+            {
+                Debug.Log("Click R " + dpadXAxis);// Call your function here
+                dpadXActivated = true;
+            }
+            else if (dpadXAxis < 0f)
+            {
+                Debug.Log("Click L " + dpadXAxis); // Call your function here
+                dpadXActivated = true;
+            }
+        }
+    }
+    else
+    {
+        dpadXActivated = false;
+    }
+}
+
+

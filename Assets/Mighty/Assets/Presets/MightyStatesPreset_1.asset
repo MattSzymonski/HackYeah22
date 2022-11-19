@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34148c5ec73faf24781a1684251e7a7c, type: 3}
+  m_Name: MightyStatesPreset_1
+  m_EditorClassIdentifier: 
+  info: 'WIP (fix UI and add more states)
+
+    Works with UI1
+
+    Contains 5 game
+    states: MainMenu, Settings, Playing, Pause, GameOver'
+  startingGameStateName: MainMenu
+  gameStates:
+  - name: MainMenu
+    transitionStage: 1
+    enterGameStateNames:
+    - Playing
+    - GameOver
+    - Options
+    - Pause
+    exitGameStateNames:
+    - Playing
+    - Options
+  - name: Playing
+    transitionStage: 1
+    enterGameStateNames:
+    - MainMenu
+    - GameOver
+    - Pause
+    exitGameStateNames:
+    - MainMenu
+    - GameOver
+    - Pause
+  - name: GameOver
+    transitionStage: 1
+    enterGameStateNames:
+    - Playing
+    exitGameStateNames:
+    - MainMenu
+    - Playing
+  - name: Options
+    transitionStage: 1
+    enterGameStateNames:
+    - MainMenu
+    - Pause
+    exitGameStateNames:
+    - MainMenu
+    - Pause
+  - name: Pause
+    transitionStage: 1
+    enterGameStateNames:
+    - Playing
+    - Options
+    exitGameStateNames:
+    - Playing
+    - MainMenu
+    - Options
