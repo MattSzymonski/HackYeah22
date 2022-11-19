@@ -16,7 +16,7 @@ public class UnitGroup : MonoBehaviour
     public int currentSpawnCount = 0;
     public List<GameObject> squadMembers = new List<GameObject>(); // TODO: randomize
     public GameObject squadMemberPrefab;
-    
+
     private Transform army;
 
     public FlagController moveTarget;
@@ -42,6 +42,9 @@ public class UnitGroup : MonoBehaviour
         Vector3 dest = Vector3.MoveTowards(army.position, moveTarget.transform.position, step);
         army.position = new Vector3(dest.x, dest.y, fixedZ);
         //rb.velocity = new Vector3(dest.x, dest.y, 0);
+
+        // update UnitGroups status
+        UpdateUnitDeath();
     }
     public void Spawn()
     {
@@ -63,6 +66,15 @@ public class UnitGroup : MonoBehaviour
         bannerman = squadMembers[rand];
         //bannerman.GetComponent<Sprite>() // swap it
         */
+    }
+
+    private void UpdateUnitDeath()
+    {
+        if (squadMembers.TrueForAll(g => g.activeSelf == false))
+        {
+            Debug.Log("All Dead");
+            gameObject.SetActive(false);
+        }
     }
 
     void onDrawGizmos()

@@ -50,7 +50,12 @@ public class Unit : MonoBehaviour
         {
             Debug.Log("HitEnemy");
             // TODO: implement killing logic
+            collision.gameObject.GetComponent<Unit>().Die(); // for now both of them die
+        } 
+    }
 
-        }
+    private void Die()
+    {
+        gameObject.SetActive(false);
     }
 }
