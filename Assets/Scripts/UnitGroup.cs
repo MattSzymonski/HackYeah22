@@ -10,11 +10,13 @@ public class UnitGroup : MonoBehaviour
     public float speed = 5f;
 
     // Spawn attributes
-    public float spawnRadius = 5.0f;
-    public int spawnCount = 5;
-    public float spawnSpacing = 1.0f;
+    //public float spawnRadius = 5.0f;
+    public int spawnCount = 10;
+    //public float spawnSpacing = 1.0f;
     public int currentSpawnCount = 0;
-    public List<GameObject> squadMembers = new List<GameObject>(); // TODO: randomize
+    public List<GameObject> squadMembers = new List<GameObject>(); // TODO: randomizes
+    public GameObject formation;
+
     public GameObject squadMemberPrefab;
 
     private Transform army;
@@ -39,8 +41,7 @@ public class UnitGroup : MonoBehaviour
             //Debug.Log("Selected!");
         }
         var step = speed * Time.deltaTime;
-        Vector3 dest = Vector3.MoveTowards(army.position, moveTarget.transform.position, step);
-        army.position = new Vector3(dest.x, dest.y, fixedZ);
+        formation.transform.position = Vector2.MoveTowards(formation.transform.position, moveTarget.transform.position, step);
         //rb.velocity = new Vector3(dest.x, dest.y, 0);
 
         // update UnitGroups status
@@ -48,16 +49,12 @@ public class UnitGroup : MonoBehaviour
     }
     public void Spawn()
     {
-        while (currentSpawnCount < spawnCount)
+        foreach (Transform formationTrans in formation.transform)
         {
-            Vector3 spawnPosition = army.position + Random.insideUnitSphere * spawnRadius;
-            GameObject newSquadMember = Instantiate(squadMemberPrefab, spawnPosition, Quaternion.identity) as GameObject;
+            GameObject newSquadMember = Instantiate(squadMemberPrefab, formationTrans.position, Quaternion.identity) as GameObject;
             newSquadMember.transform.parent = army;
-            newSquadMember.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, army.position.z);
-            //newSquadMember.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 0f, 0f);
-            newSquadMember.tag = gameObject.tag;
-            squadMembers.Add(newSquadMember);
-            currentSpawnCount++;
+            newSquadMember.transform.position = new Vector3(formationTrans.position.x, formationTrans.position.y, army.position.z);
+            newSquadMember.GetComponent<Unit>().formationSlot = formationTrans;
         }
 
         /* TOOD: bannerman or just a flag to be drageed around
@@ -72,14 +69,14 @@ public class UnitGroup : MonoBehaviour
     {
         if (squadMembers.TrueForAll(g => g.activeSelf == false))
         {
-            Debug.Log("All Dead");
-            gameObject.SetActive(false);
+           // Debug.Log("All Dead");
+            //gameObject.SetActive(false);
         }
     }
 
     void onDrawGizmos()
     {
-        DebugExtension.DebugWireSphere(army.position, Color.yellow, spawnRadius);
+        //DebugExtension.DebugWireSphere(army.position, Color.yellow, spawnRadius);
     }
 
 }
