@@ -44,7 +44,13 @@ public class MainGameManager : MightyGameManager
 
     public void CloseInfoPanel()
     {
-        MightyUIManager.Instance.ToggleUIPanel("InfoPanel", false, false);
+        MightyUIManager.Instance.ToggleUIPanel("InfoPanel", false, false); 
+    }
+
+    public void OpenInfoPanel()
+    {
+        Debug.Log("Dfpsko;");
+        MightyUIManager.Instance.ToggleUIPanel("InfoPanel", true, true); 
     }
 
     // --- MightyGameBrain callbacks ---
@@ -92,6 +98,7 @@ public class MainGameManager : MightyGameManager
     public void TriggerLosingBattle()
     {
         Debug.Log("You Lose!");
-
+        // if standing on potopped node, trigger losing battle and die
+        // else win
     }
 }
