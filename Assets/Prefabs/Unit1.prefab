@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 9185559366905162475}
   m_Layer: 0
   m_Name: Unit1
-  m_TagString: Untagged
+  m_TagString: PlayerArmy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

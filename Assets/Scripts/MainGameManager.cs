@@ -82,7 +82,10 @@ public class MainGameManager : MightyGameManager
     // This is called by MightyGameBrain on every game state enter (you decide to handle it or not)
     public override IEnumerator OnGameStateEnter(string enteringGameState, string exitingGameState)
     {
-     
+        if (enteringGameState == "GameOver")
+        {
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
+        }
 
         if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, true));

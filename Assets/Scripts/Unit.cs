@@ -81,17 +81,16 @@ public class Unit : MonoBehaviour
         for (int i = 0; i < enemies.Length; i++)
         {
             //if (enemies[i].tag != Utils.ENEMY_TAG)
-            if(CompareTag(enemies[i].tag))
+            if (gameObject.tag == "PlayerArmy" && enemies[i].tag == "Enemy" || gameObject.tag == "Enemy" && enemies[i].tag == "PlayerArmy")
             {
-                continue;
+                float distance = Vector2.Distance(transform.position, enemies[i].transform.position);
+                if (distance < closestDistance)
+                {
+                    closestIndex = i;
+                    closestDistance = distance;
+                }
             }
-
-            float distance = Vector2.Distance(transform.position, enemies[i].transform.position);
-            if (distance < closestDistance)
-            {
-                closestIndex = i;
-                closestDistance = distance;
-            }
+            
         }
 
         if (closestIndex != -1)

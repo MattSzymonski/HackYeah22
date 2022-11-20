@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 6262775410447495857}
   m_Layer: 0
   m_Name: Footmen_1
-  m_TagString: Untagged
+  m_TagString: PlayerArmy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -651,6 +651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7966d290569289b4cad9e4a68d3ef4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  dead: 0
   speed: 5
   rotationSpeed: 0.5
   combatExitProtectionTime: 2

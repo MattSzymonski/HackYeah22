@@ -88,6 +88,7 @@ public class Battle : MonoBehaviour
         Debug.Log("xxxxxxxxxxxxxxxxxxx won");
 
         MightyGameBrain.Instance.TransitToNextGameState("Map");
+        player.gold += Random.Range(2, 5);
         battleWon = true;
 
         for (int i = player.cards.Count - 1; i >= 0; i--)
