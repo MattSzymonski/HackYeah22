@@ -18,10 +18,10 @@ public class InfoPanelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nodeManager = GameObject.Find("MapNodes").GetComponent<NodeManager>();
-        title = GameObject.Find("Title").GetComponent<Text>();
+        nodeManager = GameObject.Find("Map").GetComponentInChildren<NodeManager>();
+        title = GameObject.Find("Title").GetComponentInChildren<Text>();
         image = GameObject.Find("Image").GetComponent<Image>();
-        description = GameObject.Find("Description").GetComponent<Text>();
+        description = GameObject.Find("Description").GetComponentInChildren<Text>();
         enterButton = GameObject.Find("EnterButton").GetComponent<Button>();
         exitButton = GameObject.Find("ExitButton").GetComponent<Button>();
     }

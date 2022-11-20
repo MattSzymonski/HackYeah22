@@ -240,6 +240,11 @@ PrefabInstance:
       objectReference: {fileID: 1898728510}
     - target: {fileID: 7575550159713405922, guid: f1cb6ce4c4e46e447805b2309bf904d1,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575550159713405922, guid: f1cb6ce4c4e46e447805b2309bf904d1,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExitButtonPressed
       objectReference: {fileID: 0}
@@ -2143,6 +2148,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 8266995331079554242}
+    - target: {fileID: 7575550159713405922, guid: f1cb6ce4c4e46e447805b2309bf904d1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7575550159713405922, guid: f1cb6ce4c4e46e447805b2309bf904d1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -5983,6 +5993,7 @@ MonoBehaviour:
   speed: 3
   player: {fileID: 2039401600}
   infoPanel: {fileID: 1898728510}
+  mainGameManager: {fileID: 0}
 --- !u!4 &1083576910
 Transform:
   m_ObjectHideFlags: 0
@@ -9883,7 +9894,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   places:
   - {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
-  infoPanel: {fileID: 0}
   title: {fileID: 0}
   image: {fileID: 0}
   description: {fileID: 0}

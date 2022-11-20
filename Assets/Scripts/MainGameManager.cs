@@ -44,13 +44,12 @@ public class MainGameManager : MightyGameManager
 
     public void CloseInfoPanel()
     {
-        MightyUIManager.Instance.ToggleUIPanel("InfoPanel", false, false); 
+        StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("InfoPanel", false, false));
     }
 
     public void OpenInfoPanel()
     {
-        Debug.Log("Dfpsko;");
-        MightyUIManager.Instance.ToggleUIPanel("InfoPanel", true, true); 
+        StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("InfoPanel", true, true));
     }
 
     // --- MightyGameBrain callbacks ---
