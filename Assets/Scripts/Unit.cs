@@ -6,14 +6,17 @@ public class Unit : MonoBehaviour
 {
     // Movement controls
     public float speed = 5f;
-    public float enemyDetectionRadius = 2f;
+    public float enemyDetectionRadius = 1f;
     private UnitGroup unitGroup;
 
     public Transform formationSlot;
     public GameObject chosenEnemy;
 
+    public float maxDistanceFromFormation = 2.0f;
+    public bool inCombat = false;
     //private float fixedZ;
     //private Rigidbody2D rb;
+    private float distanceToFormationSlot;
 
     //private GameObject movementTarget;
     // Start is called before the first frame update
@@ -27,49 +30,17 @@ public class Unit : MonoBehaviour
 
     private void Update()
     {
-        if (unitGroup.exitingCombat)
-        {
-            CombatExitingLogic();
-            return;
-        }
-
-        if (unitGroup.inCombat && !unitGroup.exitingCombat)
-        {
-            // damage
-            CombatLogic();
-        }
-        else if (!unitGroup.exitingCombat)
-        {
-            FlagFollowLogic();
-        }
+        FlagFollowLogic();
+        distanceToFormationSlot = Vector2.Distance(transform.position, formationSlot.position);
+        CombatLogic();
     }
 
     private void CombatLogic()
     {
-        // formation transform is the weighted centre of all units
-        // find enemy that has less than 3 other guys attacking them and is closest, move towards them avoiding friendly units
-        if (!chosenEnemy)
+        if (distanceToFormationSlot > maxDistanceFromFormation)
         {
-            Debug.Log("Unit " + gameObject.name + " does not have an enemy assigned");
-            return; // TODO: for now they just stop
+
         }
-        
-        Debug.Log("Unit " + gameObject.name + " enemy: " + chosenEnemy.name);
-
-        // if close enough to the enemy do nothing
-        //if (transform.position.x )
-        var step = speed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, chosenEnemy.transform.position, step);
-
-        // check if we pressed mouse in combat, then perform FlagFollowLogic (TODO: enemy will still be damaging us?) and trigger this unAttackable for a time
-        if (unitGroup.selected && !unitGroup.exitingCombat)
-        {
-            unitGroup.inCombat = false;
-            unitGroup.exitingCombat = true;
-        }
-        
-        // if no more enemies also exit combat
-
     }
 
     private void FlagFollowLogic()
@@ -83,41 +54,25 @@ public class Unit : MonoBehaviour
         
         // check if enemy unit in some radius (triggerBox for formationSlot)
         var enemies = Physics2D.OverlapCircleAll(transform.position, enemyDetectionRadius);//, Utils.ENEMY_LAYER); // TODO: layer does not work?
-        //if (enemy)
-        foreach(var enemy in enemies)
-        {
-            if (enemy.tag != Utils.ENEMY_TAG || enemy == this)
-                continue;
+        Debug.Log(enemies);
+        ////if (enemy)
+        //foreach(var enemy in enemies)
+        //{
+        //    if (enemy.tag != Utils.ENEMY_TAG || enemy == this)
+        //        continue;
 
-            // whole unit in combat
-            unitGroup.selected = false;
+        //    // whole unit in combat
+        //    unitGroup.selected = false;
 
-            unitGroup.inCombat = true;
-            chosenEnemy = enemy.gameObject;
+        //    unitGroup.inCombat = true;
+        //    chosenEnemy = enemy.gameObject;
 
-            // choose this unit as enemy's target if don't have any yet
-            var enemyUnit = enemy.GetComponent<Unit>();
-            if (!enemyUnit.chosenEnemy)
-                enemyUnit.chosenEnemy = this.gameObject;
-        }
+        //    // choose this unit as enemy's target if don't have any yet
+        //    var enemyUnit = enemy.GetComponent<Unit>();
+        //    if (!enemyUnit.chosenEnemy)
+        //        enemyUnit.chosenEnemy = this.gameObject;
+        //}
     }
-
-    private void CombatExitingLogic()
-    {
-        var step = speed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, formationSlot.position, step);
-    }
-
-    /*
-    // what about mobile TODO: requires sophisticated tools in unity
-    private void OnMouseDown()
-    {
-        if (!unitGroup.selected)
-            unitGroup.selected = true; // TODO: deselect old one implement it
-
-        // TODO: deselect all other guys
-    }
-    */
 
     // TODO: implement damaging
     // for now simple collision
