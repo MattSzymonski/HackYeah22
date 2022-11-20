@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cac766455f0699c46bcda5d96d8d2e19, type: 3}
-  m_Name: Card_Infantry
+  m_Name: Card_Swordsman
   m_EditorClassIdentifier: 
   name: Swordsmen
   description: 
   image: {fileID: 21300000, guid: ba0925fb828c67f4a92e7dfb88365d4d, type: 3}
   cost: 3
-  unitPrefab: {fileID: 6262775410447495871, guid: 1799d5c2506c7414d91ae6299d467b39,
+  unitPrefab: {fileID: 6262775410447495871, guid: 5078b8c8d0f69d448b343ec464b66702,
     type: 3}
