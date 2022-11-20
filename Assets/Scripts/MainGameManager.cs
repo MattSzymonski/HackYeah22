@@ -19,6 +19,9 @@ public class MainGameManager : MightyGameManager
     public GameObject BattleCardsHolder;
     public GameObject MainMap;
     public GameObject Battle;
+    public GameObject player;
+
+    public Text goldText;
 
     void Awake()
     {
@@ -28,18 +31,24 @@ public class MainGameManager : MightyGameManager
     void Start()
     {
         brain = MightyGameBrain.Instance;
+        goldText = GameObject.Find("Gold").GetComponentInChildren<Text>();
     }
 
     void Update()
     {
         HandleInput();
 
-
+        UpdateUI(); 
     }
 
     void HandleInput()
     {
        
+    }
+
+    void UpdateUI()
+    {
+        goldText.text = "Z?oto: " + player.GetComponent<Player>().gold;
     }
 
     public void CloseInfoPanel()
