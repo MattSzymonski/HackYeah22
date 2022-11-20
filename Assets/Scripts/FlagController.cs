@@ -9,7 +9,7 @@ public class FlagController : MonoBehaviour
     private float fixedZ;
     private UnitGroup unitGroup;
     private bool isEnemy = false;
-    public float patrolLength = 5.0f;
+    public Vector2 patrolLength = new Vector2(10.0f, 0.0f);
     private Vector2 startPosition;
 
     private void Start()
@@ -34,7 +34,8 @@ public class FlagController : MonoBehaviour
 
     void Patrol()
     {
-        transform.position = startPosition + new Vector2(Mathf.PingPong(Time.time * patrolLength, patrolLength), 0);
+        transform.position = startPosition + new Vector2(Mathf.PingPong(Time.time, 10.0f), 0.0f);
+
     }
     
 
