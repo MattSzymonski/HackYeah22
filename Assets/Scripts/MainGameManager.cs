@@ -2,6 +2,7 @@ using Mighty;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainGameManager : MightyGameManager
@@ -45,6 +46,13 @@ public class MainGameManager : MightyGameManager
 
         UpdateUI(); 
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
 
     void HandleInput()
     {
