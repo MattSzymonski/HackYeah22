@@ -237,7 +237,7 @@ MonoBehaviour:
   speed: 3
   player: {fileID: 2039401600}
   infoPanel: {fileID: 1898728510}
-  mainGameManager: {fileID: 0}
+  mainGameManager: {fileID: 1382038366}
 --- !u!1 &28823234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
@@ -2486,6 +2486,8 @@ MonoBehaviour:
   cardsOffering: []
   place: {fileID: 11400000, guid: 507cc1f1822893c4894aa84b25bf354f, type: 2}
   background: {fileID: 0}
+  goldText: {fileID: 0}
+  movesText: {fileID: 0}
 --- !u!1 &331496512
 GameObject:
   m_ObjectHideFlags: 0
@@ -5293,6 +5295,8 @@ MonoBehaviour:
   cardsOffering: []
   place: {fileID: 11400000, guid: ba2d9a90669fe3c41b5af4880130258c, type: 2}
   background: {fileID: 0}
+  goldText: {fileID: 0}
+  movesText: {fileID: 0}
 --- !u!1 &593943589
 GameObject:
   m_ObjectHideFlags: 0
@@ -8411,6 +8415,8 @@ MonoBehaviour:
   cardsOffering: []
   place: {fileID: 11400000, guid: 98bf6651cdb8985428dad427f016a493, type: 2}
   background: {fileID: 0}
+  goldText: {fileID: 0}
+  movesText: {fileID: 0}
 --- !u!1 &1213937910
 GameObject:
   m_ObjectHideFlags: 0
@@ -13561,6 +13567,8 @@ MonoBehaviour:
   cardsOffering: []
   place: {fileID: 11400000, guid: d05d5d26e1bb30c4bb589702a2082a57, type: 2}
   background: {fileID: 0}
+  goldText: {fileID: 0}
+  movesText: {fileID: 0}
 --- !u!1 &2039401598
 GameObject:
   m_ObjectHideFlags: 0
