@@ -651,14 +651,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  rotationSpeed: 0.5
+  combatExitProtectionTime: 2
   spawnCount: 5
   currentSpawnCount: 0
   squadMembers: []
   formation: {fileID: 5917037621735907908}
   squadMemberPrefab: {fileID: 1740352664214219828, guid: 03dc460b3f60d8c44b7215c4e8edcc1a,
     type: 3}
+  army: {fileID: 1041009156}
   moveTarget: {fileID: 6262775409098855794}
   selected: 0
+  inCombat: 0
+  exitingCombat: 0
+  isEnemy: 0
+  combatExitTimer:
+    name: 
+    speed: 0
+    currentTime: 0
+    targetTime: 0
+    loop: 0
+    stopped: 0
+    finished: 0
+  combatExitTimerStarted: 0
 --- !u!1 &6817979845303636793
 GameObject:
   m_ObjectHideFlags: 0

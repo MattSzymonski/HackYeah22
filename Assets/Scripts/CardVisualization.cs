@@ -8,6 +8,7 @@ public class CardVisualization : MonoBehaviour
     public Village village;
     public int index;
     public bool isBattleCardSelected;
+    public GameObject unitPrefab;
 
     private Vector3 cardPosition;
 
@@ -79,5 +80,15 @@ public class CardVisualization : MonoBehaviour
     public void PlaceUnit()
     {
         Debug.Log("Placed unit");
+        Vector3 spawnLocation = Camera.main.ScreenToWorldPoint(transform.position);
+        GameObject unit = Instantiate(unitPrefab, spawnLocation, Quaternion.identity) as GameObject;
+        unit.transform.position = new Vector3(spawnLocation.x, spawnLocation.y, 5);
+        unit.GetComponent<UnitGroup>().Spawn();
+        Despawn();
+    }
+
+    public void Despawn()
+    {
+        Destroy(gameObject);
     }
 }

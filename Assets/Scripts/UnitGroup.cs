@@ -22,7 +22,7 @@ public class UnitGroup : MonoBehaviour
 
     public GameObject squadMemberPrefab;
 
-    private Transform army;
+    public GameObject army;
 
     public FlagController moveTarget;
 
@@ -37,10 +37,8 @@ public class UnitGroup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        army = gameObject.transform.Find("Army");
         moveTarget = GetComponentInChildren<FlagController>();
         combatExitTimer = Mighty.MightyTimersManager.Instance.CreateTimer("ExitingCombatTimer", combatExitProtectionTime, 1.0f, false, true);
-        Spawn();
     }
 
     // Update is called once per frame
@@ -87,8 +85,8 @@ public class UnitGroup : MonoBehaviour
         foreach (Transform formationTrans in formation.transform)
         {
             GameObject newSquadMember = Instantiate(squadMemberPrefab, formationTrans.position, Quaternion.identity) as GameObject;
-            newSquadMember.transform.parent = army;
-            newSquadMember.transform.position = new Vector3(formationTrans.position.x, formationTrans.position.y, army.position.z);
+            newSquadMember.transform.parent = army.transform;
+            newSquadMember.transform.position = new Vector3(formationTrans.position.x, formationTrans.position.y, army.transform.position.z);
             newSquadMember.layer = Utils.ENEMY_LAYER;
             newSquadMember.GetComponent<Unit>().formationSlot = formationTrans;
             if (isEnemy)
