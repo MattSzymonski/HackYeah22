@@ -11,7 +11,7 @@ public class Unit : MonoBehaviour
 
     public Transform formationSlot;
     public GameObject chosenEnemy;
-
+    public Animator anim;
     public float maxDistanceFromFormation = 2.0f;
     public bool inCombat = false;
     //private float fixedZ;
@@ -28,6 +28,7 @@ public class Unit : MonoBehaviour
     void Start()
     {
         unitGroup = gameObject.GetComponentInParent<UnitGroup>();
+        anim = gameObject.GetComponent<Animator>();
         //rb = gameObject.GetComponent<Rigidbody2D>(); TODO: move one by one
         //movementTarget = unitGroup.moveTarget.gameObject;
         //fixedZ = transform.position.z;
@@ -38,12 +39,14 @@ public class Unit : MonoBehaviour
         if (inCombat)
         {
             CombatLogic();
+            anim.SetInteger("State", 2);
         }
         else
         {
             FlagFollowLogic();
+            anim.SetInteger("State", 1);
         }
-      
+
         distanceToFormationSlot = Vector2.Distance(transform.position, formationSlot.position);
         if (distanceToFormationSlot > maxDistanceFromFormation)
         {
@@ -54,7 +57,10 @@ public class Unit : MonoBehaviour
             inCombat = true;
             chosenEnemy = EnemyNearby();
         }
-
+        else
+        {
+            anim.SetInteger("State", 0);
+        }
         //if (EnemyNearby() == null)
         //{
         //    inCombat = false;
