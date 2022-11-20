@@ -237,7 +237,7 @@ MonoBehaviour:
   speed: 3
   player: {fileID: 2039401600}
   infoPanel: {fileID: 1898728510}
-  mainGameManager: {fileID: 0}
+  mainGameManager: {fileID: 1382038366}
 --- !u!1 &28823234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
@@ -2278,6 +2278,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &319493159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69324264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5c906c3de74214992600e09beda21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsToOffer:
+  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  - {fileID: 11400000, guid: b98f4338dc1564fa5b3133ee19ea5360, type: 2}
+  - {fileID: 11400000, guid: b98f4338dc1564fa5b3133ee19ea5360, type: 2}
+  cardsOffering: []
+  place: {fileID: 11400000, guid: 507cc1f1822893c4894aa84b25bf354f, type: 2}
+  background: {fileID: 0}
+  goldText: {fileID: 0}
+  movesText: {fileID: 0}
 --- !u!1 &331496512
 GameObject:
   m_ObjectHideFlags: 0
@@ -3797,7 +3818,7 @@ MonoBehaviour:
   cardCounts: 
   cards: []
   EnemyBattle: {fileID: 11400000, guid: 2be4d36511c524a7695af9919ed015b3, type: 2}
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: a4c393dd435927340896ff3905c27dc8, type: 2}
   enteredBattle: 0
   playerUnits: []
   enemyUnits: []
@@ -4523,7 +4544,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   cardsOffering: []
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: 89b98ac3601db534a91127fec9b5313d, type: 2}
   background: {fileID: 21300000, guid: d2f1e5a8f9aa8ad49b4ba6498894614f, type: 3}
   goldText: {fileID: 0}
   movesText: {fileID: 0}
@@ -5099,6 +5120,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &592374143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161542093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5c906c3de74214992600e09beda21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsToOffer:
+  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  - {fileID: 11400000, guid: b98f4338dc1564fa5b3133ee19ea5360, type: 2}
+  cardsOffering: []
+  place: {fileID: 11400000, guid: ba2d9a90669fe3c41b5af4880130258c, type: 2}
+  background: {fileID: 0}
+  goldText: {fileID: 0}
+  movesText: {fileID: 0}
 --- !u!1 &593943589
 GameObject:
   m_ObjectHideFlags: 0
@@ -8198,6 +8240,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1204213686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204213682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5c906c3de74214992600e09beda21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsToOffer:
+  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  - {fileID: 11400000, guid: b98f4338dc1564fa5b3133ee19ea5360, type: 2}
+  - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
+  cardsOffering: []
+  place: {fileID: 11400000, guid: 98bf6651cdb8985428dad427f016a493, type: 2}
+  background: {fileID: 0}
+  goldText: {fileID: 0}
+  movesText: {fileID: 0}
 --- !u!1 &1213937910
 GameObject:
   m_ObjectHideFlags: 0
@@ -10465,7 +10528,7 @@ MonoBehaviour:
   cardCounts: 
   cards: []
   EnemyBattle: {fileID: 11400000, guid: bb147565d45d34a2492c5668a6849da3, type: 2}
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: ccd65811535ec7c489beea4ac825cf0a, type: 2}
   enteredBattle: 0
   playerUnits: []
   enemyUnits: []
@@ -11572,7 +11635,7 @@ MonoBehaviour:
   cardCounts: 
   cards: []
   EnemyBattle: {fileID: 11400000, guid: 1a33d712a76544316887ba4e04d8fe09, type: 2}
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: fb13cc855fc8e2646b2f087ba182f2e4, type: 2}
   enteredBattle: 0
   playerUnits: []
   enemyUnits: []
@@ -13071,7 +13134,7 @@ MonoBehaviour:
   cardCounts: 
   cards: []
   EnemyBattle: {fileID: 11400000, guid: 3c8f2421032374e5c98a7ee8d8bd868d, type: 2}
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: 32edd45b58ceb914e87b296e0098b67b, type: 2}
   enteredBattle: 0
   playerUnits: []
   enemyUnits: []
@@ -13379,6 +13442,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2016074817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016074813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5c906c3de74214992600e09beda21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsToOffer:
+  - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
+  - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
+  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  cardsOffering: []
+  place: {fileID: 11400000, guid: d05d5d26e1bb30c4bb589702a2082a57, type: 2}
+  background: {fileID: 0}
+  goldText: {fileID: 0}
+  movesText: {fileID: 0}
 --- !u!1 &2039401598
 GameObject:
   m_ObjectHideFlags: 0
@@ -13836,7 +13920,7 @@ MonoBehaviour:
   cardCounts: 
   cards: []
   EnemyBattle: {fileID: 11400000, guid: 48611f94ab9724be8a5ce72faced20aa, type: 2}
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: 49f4bc9d99edfa74eb13a3b7ae61708a, type: 2}
   enteredBattle: 0
   playerUnits: []
   enemyUnits: []

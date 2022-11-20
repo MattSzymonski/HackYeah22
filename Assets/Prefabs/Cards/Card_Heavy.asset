@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac766455f0699c46bcda5d96d8d2e19, type: 3}
   m_Name: Card_Heavy
   m_EditorClassIdentifier: 
-  name: Heavy
+  name: Heavy Swordsmen
   description: 
-  image: {fileID: 21300000, guid: 81b7da8c16c009d42bc9a3309bd20586, type: 3}
+  image: {fileID: 21300000, guid: 98b765a522c15f948a5f34641744999b, type: 3}
   cost: 6
-  unitPrefab: {fileID: 6262775410447495871, guid: 6d46f1fb958e65d42ba5540e60f4aea4,
+  unitPrefab: {fileID: 6262775410447495871, guid: 1799d5c2506c7414d91ae6299d467b39,
     type: 3}
