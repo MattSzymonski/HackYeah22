@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac766455f0699c46bcda5d96d8d2e19, type: 3}
   m_Name: Card_Infantry
   m_EditorClassIdentifier: 
-  name: Piechota
+  name: Swordsmen
   description: 
   image: {fileID: 21300000, guid: ba0925fb828c67f4a92e7dfb88365d4d, type: 3}
   cost: 3
