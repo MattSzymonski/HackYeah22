@@ -95,6 +95,7 @@ public class MainGameManager : MightyGameManager
         {
             Battle.SetActive(false);
             MainMap.SetActive(true);
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
         }
 
         yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel(enteringGameState + "Panel", true, true));
@@ -105,7 +106,7 @@ public class MainGameManager : MightyGameManager
     {
         if (exitingGameState == "MainMenu")
         {
-            // TODO New game setup here!
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, true));
         }
 
         if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state
