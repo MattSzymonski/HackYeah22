@@ -8597,11 +8597,11 @@ MonoBehaviour:
     loop: 0
     soundType: 0
   - name: Debug_Background_Music
-    clip: {fileID: 8300000, guid: a186fc6e848313b4cac53a36eef97965, type: 3}
-    volume: 0.1
+    clip: {fileID: 8300000, guid: c14fd1ab41302024cbaf59c09b565330, type: 3}
+    volume: 0.05
     pitch: 1
     playOnAwake: 1
-    loop: 0
+    loop: 1
     soundType: 1
   audioSourcePool: []
 --- !u!1 &1282210897
@@ -9512,6 +9512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433958658}
   - component: {fileID: 1433958657}
+  - component: {fileID: 1433958659}
   m_Layer: 0
   m_Name: PlayerMarker
   m_TagString: Untagged
@@ -9559,7 +9560,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 4ba4b524663cdab44976d89a54c724c6, type: 3}
   m_Color: {r: 0.31764707, g: 0.5686275, b: 0.8980392, a: 1}
   m_FlipX: 0
@@ -9586,6 +9587,68 @@ Transform:
   m_Father: {fileID: 1762090998}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1433958659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433958656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01337a5142bfbff4a8e637568228c4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  juicers:
+  - rid: 675991202408693774
+  references:
+    version: 2
+    RefIds:
+    - rid: 675991202408693774
+      type: {class: MightyJuicerScale, ns: Mighty, asm: Assembly-CSharp}
+      data:
+        active: 0
+        progress: 0
+        value: 0
+        name: Scale
+        type: 0
+        animationCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.49166667
+            value: 0.05
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        speed: 1
+        looping: 1
+        playOnAwake: 1
+        axisMultiplier: {x: 0, y: 0, z: 0}
 --- !u!1 &1452722993
 GameObject:
   m_ObjectHideFlags: 0

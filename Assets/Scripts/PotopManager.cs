@@ -35,6 +35,7 @@ public class PotopManager : MonoBehaviour
         // animations etc for transitions
         waves[currentWave].GetComponent<Animator>().SetBool("WaveStart", true);
         dottedWaves[currentWave].GetComponent<Animator>().SetBool("WaveStart", true);
+        dottedWaves[currentWave - 1]?.GetComponent<Animator>().SetBool("WaveStart", false);
     }
 
     public void Restart()
