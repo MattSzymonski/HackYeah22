@@ -69,6 +69,7 @@ public class UnitGroup : MonoBehaviour
             newSquadMember.transform.position = new Vector3(formationTrans.position.x, formationTrans.position.y, army.transform.position.z);
             newSquadMember.layer = Utils.ENEMY_LAYER;
             newSquadMember.GetComponent<Unit>().formationSlot = formationTrans;
+            squadMembers.Add(newSquadMember);
             if (isEnemy)
                 newSquadMember.tag = Utils.ENEMY_TAG;
         }

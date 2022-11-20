@@ -10,7 +10,7 @@ public class MainGameManager : MightyGameManager
     private static MainGameManager instance;
     public static MainGameManager Instance { get { return instance; } }
 
-
+    public Text enter;
 
     MightyGameBrain brain;
     public GameObject cardPrefab;

@@ -169,6 +169,8 @@ MonoBehaviour:
   village: {fileID: 0}
   index: 0
   isBattleCardSelected: 0
+  unitPrefab: {fileID: 0}
+  battle: {fileID: 0}
 --- !u!1 &5035926335264503117
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5035926335959563830
 RectTransform:
   m_ObjectHideFlags: 0

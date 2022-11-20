@@ -42,7 +42,7 @@ public class Battle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!battleWon)
+        if (!battleWon && MainGameManager.Instance.currentBattle == this)
         {
             // Player
             foreach (var item in playerUnits)
@@ -85,11 +85,39 @@ public class Battle : MonoBehaviour
 
     public void BattleWon()
     {
-        Debug.Log("xxxxxxxxxxxxxxxxxxxxxxxxxxx batle won");
+        Debug.Log("xxxxxxxxxxxxxxxxxxx won");
+
+        MightyGameBrain.Instance.TransitToNextGameState("Map");
+        battleWon = true;
+
+        for (int i = player.cards.Count - 1; i >= 0; i--)
+        {
+            if (playerIndicesToRemove.Contains(i))
+            {
+                player.cards.RemoveAt(i);
+            }
+
+            //if (i==)
+            //Card objToDestroy = player.cards[i];
+            //Destroy(objToDestroy);
+        }
+
+        for (int i = enemyUnits.Count - 1; i >= 0; i--)
+        {
+            Destroy(enemyUnits[i].gameObject);
+        }
+
+        for (int i = playerUnits.Count - 1; i >= 0; i--)
+        {
+            Destroy(playerUnits[i].gameObject);
+        }
+
     }
 
     public void EnterBattle(Player player)
     {
+
+        GameObject pare = new GameObject();
         //Debug.Log("Entered battle");
         //Debug.Log("Player has " + player.cards.Count + " cards");
         //Debug.Log("Resolve: if player has more cards than enemy, player wins");
@@ -135,6 +163,8 @@ public class Battle : MonoBehaviour
             spawnedCard.GetComponent<RectTransform>().localPosition = new Vector3(-550 + (550 * i), -350, 0);
             spawnedCard.GetComponent<RectTransform>().localScale = new Vector3(0.5f,0.5f,0.5f);
             spawnedCard.GetComponent<CardVisualization>().index = i;
+             //   spawnedCard.GetComponent<CardVisualization>().index = i;
+
                 spawnedCard.GetComponent<CardVisualization>().battle =this;
                 //spawnedCard.GetComponent<CardVisualization>().village = this;
                 spawnedCard.transform.GetChild(0).transform.Find("Illustration").gameObject.GetComponent<Image>().sprite = card.image;

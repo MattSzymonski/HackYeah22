@@ -59,7 +59,7 @@ public class Village : MonoBehaviour
             player.gold -= card.cost;
             cardsOffering[index] = null;
             player.cards.Add(card);
-            MightyAudioManager.Instance.PlaySound("Coin");
+            //MightyAudioManager.Instance.PlaySound("Coin");
 
             return true;
         }
