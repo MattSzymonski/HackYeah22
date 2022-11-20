@@ -97,6 +97,8 @@ public class Village : MonoBehaviour
             spawnedCard.transform.GetChild(0).transform.Find("Illustration").gameObject.GetComponent<Image>().sprite = card.image;
             // Set cost val
             spawnedCard.transform.GetChild(0).transform.Find("CostHolder").GetChild(0).gameObject.GetComponent<Text>().text = card.cost.ToString();
+            // Set card description
+            spawnedCard.transform.GetChild(0).transform.Find("Name").gameObject.GetComponent<Text>().text = card.name;
             // Juice in
         }
 
