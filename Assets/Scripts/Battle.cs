@@ -20,6 +20,8 @@ public class Battle : MonoBehaviour
     public List<int> cardCounts = new List<int>();
     public List<Card> cards = new List<Card>();
 
+    public Place place;
+
     public bool enteredBattle = false;
     // Start is called before the first frame update
     void Start()
