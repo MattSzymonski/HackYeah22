@@ -13,7 +13,7 @@ public class NodeManager : MonoBehaviour
     public int movesMade = 0;
     public int totalLevels = 3;
     public int movesForWaveProgression = 2;
-    public int movesLeft = 0;
+    public int movesLeft = 2;
     public int waveProgression = -1;
     [Header("Player Marker")]
     public GameObject PlayerMarker;
@@ -52,7 +52,7 @@ public class NodeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movesLeft = movesMade % movesForWaveProgression;
+        movesLeft = movesForWaveProgression - movesMade % movesForWaveProgression;
 
         if (PlayerMarker.transform.position != currentSelectedNode.transform.position)
         {
