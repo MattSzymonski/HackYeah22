@@ -113,7 +113,11 @@ public class Unit : MonoBehaviour
         {
             if (chosenEnemy != null)
             {
-                chosenEnemy.GetComponent<Unit>().health -= attackDamage * Time.deltaTime;
+                Unit a = chosenEnemy.GetComponent<Unit>();
+                if (a != null)
+                {
+                    a.health -= attackDamage * Time.deltaTime;
+                }
             }
            
         }
