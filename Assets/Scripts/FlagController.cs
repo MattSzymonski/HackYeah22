@@ -8,15 +8,43 @@ public class FlagController : MonoBehaviour
     private Vector3 offset;
     private float fixedZ;
     private UnitGroup unitGroup;
+    private bool isEnemy = false;
+    public Vector2 patrolLength = new Vector2(10.0f, 0.0f);
+    private Vector2 startPosition;
 
     private void Start()
     {
+        isEnemy = transform.parent.tag == "Enemy"; 
+        startPosition = transform.position;
         unitGroup = gameObject.GetComponentInParent<UnitGroup>();
         fixedZ = transform.position.z;
     }
 
+    void Update()
+    {
+        if (unitGroup.inCombat)
+        {
+            return;
+        }
+        if (isEnemy)
+        {
+            Patrol();
+        }
+    }
+
+    void Patrol()
+    {
+        transform.position = startPosition + new Vector2(Mathf.PingPong(Time.time, 10.0f), 0.0f);
+
+    }
+    
+
     void OnMouseDown()
     {
+        if (isEnemy)
+        {
+            return;
+        }
         unitGroup.selected = true;
         //if (!unitGroup.selected)
             //return;
@@ -26,6 +54,10 @@ public class FlagController : MonoBehaviour
 
     void OnMouseDrag()
     {
+        if(isEnemy)
+        {
+            return;
+        }
         if (!unitGroup.selected)
             return;
 
@@ -35,6 +67,10 @@ public class FlagController : MonoBehaviour
 
     void OnMouseUp()
     {
+        if(isEnemy)
+        {
+            return;
+        }
         if (!unitGroup.selected)
             return;
 
