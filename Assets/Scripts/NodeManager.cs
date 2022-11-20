@@ -21,7 +21,10 @@ public class NodeManager : MonoBehaviour
 
     public Player player;
 
+    public GameObject infoPanel;
+
     private PotopManager potopManager;
+    public MainGameManager mainGameManager;
 
     void Start()
     {
@@ -42,6 +45,7 @@ public class NodeManager : MonoBehaviour
         PlayerMarker.transform.position = currentSelectedNode.transform.position;
 
         potopManager = GameObject.Find("PotopManager").GetComponent<PotopManager>();
+        mainGameManager = GameObject.Find("GameManager").GetComponent<MainGameManager>();
     }
 
     // Update is called once per frame
@@ -99,12 +103,35 @@ public class NodeManager : MonoBehaviour
             }
         }
 
+        // Display the UI info about this node
         // If village exists, enter village
         Village village = currentSelectedNode.gameObject.GetComponent<Village>();
-        village?.EnterVillage(player);
-
         // If Battle exists, enter Battle
         Battle battle = currentSelectedNode.gameObject.GetComponent<Battle>();
-        battle?.EnterBattle(player);
+        var infoPanelManager = infoPanel.GetComponent<InfoPanelManager>();
+        if (village)
+            infoPanelManager.SetInfo(village.name);
+        else if (battle)
+            infoPanelManager.SetInfo(battle.name);
+
+        mainGameManager.OpenInfoPanel();
+    }
+
+    public void EnterNode()
+    {
+        if (!currentSelectedNode)
+            return;
+
+        Village village = currentSelectedNode.gameObject.GetComponent<Village>();
+        // If Battle exists, enter Battle
+        Battle battle = currentSelectedNode.gameObject.GetComponent<Battle>();
+        
+        village?.EnterVillage(player);
+        if (battle && battle.enteredBattle)
+        {
+            battle.EnterBattle(player);
+        }
+
+        mainGameManager.CloseInfoPanel();
     }
 }

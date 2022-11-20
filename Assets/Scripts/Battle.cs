@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
+
 {
 
     GameObject battlePanel;
@@ -18,6 +19,8 @@ public class Battle : MonoBehaviour
     public List<string> cardNames = new List<string>();
     public List<int> cardCounts = new List<int>();
     public List<Card> cards = new List<Card>();
+
+    public bool enteredBattle = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +72,8 @@ public class Battle : MonoBehaviour
 
             // Juice in
         }
+
+        enteredBattle = true;
 
         // Transite
         MightyGameBrain.Instance.TransitToNextGameState("Battle");
