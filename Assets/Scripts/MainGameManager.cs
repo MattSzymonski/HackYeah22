@@ -25,6 +25,7 @@ public class MainGameManager : MightyGameManager
     public Battle currentBattle;
 
     public Text goldText;
+    public GameObject goldTextVillageObject;
     public Text gameOverText;
     public Text movesText;
 

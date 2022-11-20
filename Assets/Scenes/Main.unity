@@ -13164,7 +13164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 10
-  cards: []
+  cards:
+  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
 --- !u!1 &2039919869
 GameObject:
   m_ObjectHideFlags: 0
