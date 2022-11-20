@@ -113,9 +113,9 @@ public class NodeManager : MonoBehaviour
         Battle battle = currentSelectedNode.gameObject.GetComponent<Battle>();
         var infoPanelManager = infoPanel.GetComponent<InfoPanelManager>();
         if (village)
-            infoPanelManager.SetInfo(village.name);
+            infoPanelManager.SetInfo(village.place);
         else if (battle)
-            infoPanelManager.SetInfo(battle.name);
+            infoPanelManager.SetInfo(battle.place);
 
         mainGameManager.OpenInfoPanel();
     }

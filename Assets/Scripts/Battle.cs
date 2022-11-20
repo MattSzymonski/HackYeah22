@@ -19,6 +19,7 @@ public class Battle : MonoBehaviour
 
     [Header("Cards held by enemy")]
     public EnemyBattle EnemyBattle;
+    public Place place;
 
     public bool enteredBattle = false;
     private List<Card> enemyCards;

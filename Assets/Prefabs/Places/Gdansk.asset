@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f0baaa16412234c83b85fa98de660c, type: 3}
+  m_Name: Gdansk
+  m_EditorClassIdentifier: 
+  name: "Gda\u0144sk"
+  year: 2137
+  description: "Despite ceaseless attempts on claiming control over Royal Prussia
+    by King Charles Gustaw, Gda\u0144sk stood its ground. It is famous for its fierce
+    naval defensiveness proven through several battles, one of which happened in
+    July of 1656. During this battle 30 Dutch and 10 Danish ships relieved valiant
+    defenders of maritime blockade. It is also the place where Peace Treaty of Oliwa
+    ended the Deluge."
+  image: {fileID: 21300000, guid: 81b7da8c16c009d42bc9a3309bd20586, type: 3}

@@ -10,7 +10,7 @@ public class Village : MonoBehaviour
     public List<Card> cardsToOffer;
     [ReadOnly] public List<Card> cardsOffering;
 
-    public string name;
+    public Place place;
     public Sprite background;
     GameObject villagePanel;
 
