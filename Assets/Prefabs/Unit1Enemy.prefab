@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 738792290, guid: 963c12d8315df8445b42faa25423e914, type: 3}
-  m_Color: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
+  m_Color: {r: 0.6156863, g: 0.3529412, b: 0.3529412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,8 +99,8 @@ GameObject:
   - component: {fileID: 1862945903332323760}
   - component: {fileID: 9185559366905162475}
   m_Layer: 0
-  m_Name: Unit
-  m_TagString: Untagged
+  m_Name: Unit1Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   distanceToFormationSlot: 0
   attackRange: 1.5
   health: 100
-  attackDamage: 0.001
+  attackDamage: 0.01
 --- !u!212 &1165071944323686330
 SpriteRenderer:
   m_ObjectHideFlags: 0

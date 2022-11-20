@@ -614,8 +614,8 @@ GameObject:
   - component: {fileID: 6262775410447495870}
   - component: {fileID: 6262775410447495857}
   m_Layer: 0
-  m_Name: Footmen
-  m_TagString: Untagged
+  m_Name: FootmenEnemy_1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
   currentSpawnCount: 0
   squadMembers: []
   formation: {fileID: 5917037621735907908}
-  squadMemberPrefab: {fileID: 1740352664214219828, guid: 03dc460b3f60d8c44b7215c4e8edcc1a,
+  squadMemberPrefab: {fileID: 1740352664214219828, guid: 0933d82173aa5e941a415f4a73737713,
     type: 3}
   army: {fileID: 1041009156}
   moveTarget: {fileID: 6262775409098855794}
