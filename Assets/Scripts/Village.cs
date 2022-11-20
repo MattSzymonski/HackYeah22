@@ -59,7 +59,6 @@ public class Village : MonoBehaviour
     public void EnterVillage(Player player)
     {
         this.player = player;
-
         // Background
         MainGameManager.Instance.villageBackground.sprite = background;
 
@@ -75,7 +74,7 @@ public class Village : MonoBehaviour
             Card card = cardsOffering[i];
             if (card == null)
             {
-                return;
+                continue;
             }
 
             GameObject spawnedCard = GameObject.Instantiate(MainGameManager.Instance.cardPrefab, Vector3.zero, Quaternion.identity);
@@ -84,7 +83,7 @@ public class Village : MonoBehaviour
             spawnedCard.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
             spawnedCard.GetComponent<CardVisualization>().index = i;
             spawnedCard.GetComponent<CardVisualization>().village = this;
-
+            spawnedCard.transform.GetChild(0).transform.Find("Illustration").gameObject.GetComponent<Image>().sprite = card.image;
             // Juice in
         }
 

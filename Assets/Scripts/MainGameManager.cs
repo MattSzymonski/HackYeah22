@@ -13,8 +13,12 @@ public class MainGameManager : MightyGameManager
 
     MightyGameBrain brain;
     public GameObject cardPrefab;
+    public GameObject battleCardPrefab;
     public Image villageBackground;
     public GameObject villageCardsHolder;
+    public GameObject BattleCardsHolder;
+    public GameObject MainMap;
+    public GameObject Battle;
 
     void Awake()
     {
@@ -52,6 +56,18 @@ public class MainGameManager : MightyGameManager
 
         if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, true));
+        
+        if (enteringGameState == "Battle" )
+        {
+            MainMap.SetActive(false);
+            Battle.SetActive(true);
+        }
+        
+        if (enteringGameState == "Map")
+        {
+            Battle.SetActive(false);
+            MainMap.SetActive(true);
+        }
 
         yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel(enteringGameState + "Panel", true, true));
     }
@@ -67,8 +83,15 @@ public class MainGameManager : MightyGameManager
         if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, false));
 
+
         yield return new WaitForSeconds(1);
 
         yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel(exitingGameState + "Panel", false, true));
+    }
+
+    public void TriggerLosingBattle()
+    {
+        Debug.Log("You Lose!");
+
     }
 }
