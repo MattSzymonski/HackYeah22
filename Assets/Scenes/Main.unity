@@ -7440,8 +7440,9 @@ MonoBehaviour:
   BattleCardsHolder: {fileID: 1651085410}
   MainMap: {fileID: 1762090997}
   Battle: {fileID: 1452722993}
-  player: {fileID: 0}
+  player: {fileID: 2039401598}
   goldText: {fileID: 0}
+  gameOverText: {fileID: 0}
 --- !u!4 &1382038368
 Transform:
   m_ObjectHideFlags: 0

@@ -15,12 +15,7 @@ public class PotopManager : MonoBehaviour
     void Start()
     {
         mainGameManager = GameObject.Find("GameManager").GetComponent<MainGameManager>();
-        for (int i = 1; i < maxWaves; ++i)
-        {
-            waves[i].SetActive(false);
-            dottedWaves[i].SetActive(false);
-        }
-        //waves[currentWave].GetComponent<SpriteRenderer>().
+        dottedWaves[0].GetComponent<Animator>().SetBool("WaveStart", true);
     }
 
     // Update is called once per frame
@@ -31,8 +26,6 @@ public class PotopManager : MonoBehaviour
 
     public void AdvanceWave(Node currentnode)
     {
-        waves[currentWave].SetActive(false);
-        dottedWaves[currentWave].SetActive(false);
         ++currentWave;
         if (currentWave > maxWaves)
         {
@@ -40,8 +33,8 @@ public class PotopManager : MonoBehaviour
             return;
         }
         // animations etc for transitions
-        waves[currentWave].SetActive(true); // TODO: fade in
-        dottedWaves[currentWave].SetActive(true); // TODO: fade in
+        waves[currentWave].GetComponent<Animator>().SetBool("WaveStart", true);
+        dottedWaves[currentWave].GetComponent<Animator>().SetBool("WaveStart", true);
     }
 
     public void Restart()
