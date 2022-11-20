@@ -26,8 +26,6 @@ public class PotopManager : MonoBehaviour
 
     public void AdvanceWave(Node currentnode)
     {
-        //waves[currentWave].GetComponent<Animator>().SetBool("WaveStart", false);
-        //dottedWaves[currentWave].GetComponent<Animator>().SetBool("WaveStart", false);
         ++currentWave;
         if (currentWave > maxWaves)
         {

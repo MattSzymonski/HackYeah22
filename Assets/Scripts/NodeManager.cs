@@ -13,6 +13,7 @@ public class NodeManager : MonoBehaviour
     public int movesMade = 0;
     public int totalLevels = 3;
     public int movesForWaveProgression = 2;
+    public int movesLeft = 0;
     public int waveProgression = -1;
     [Header("Player Marker")]
     public GameObject PlayerMarker;
@@ -51,6 +52,8 @@ public class NodeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        movesLeft = movesMade % movesForWaveProgression;
+
         if (PlayerMarker.transform.position != currentSelectedNode.transform.position)
         {
             PlayerMarker.transform.position = Vector3.Lerp(PlayerMarker.transform.position, currentSelectedNode.transform.position, speed*Time.deltaTime);
@@ -127,7 +130,7 @@ public class NodeManager : MonoBehaviour
         Battle battle = currentSelectedNode.gameObject.GetComponent<Battle>();
         
         village?.EnterVillage(player);
-        if (battle && battle.enteredBattle)
+        if (battle && !battle.enteredBattle)
         {
             battle.EnterBattle(player);
         }
