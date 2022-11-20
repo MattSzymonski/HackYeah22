@@ -18,7 +18,7 @@ public class InfoPanelManager : MonoBehaviour
     {
         nodeManager = GameObject.Find("Map").GetComponentInChildren<NodeManager>();
         title = GameObject.Find("Title").GetComponentInChildren<Text>();
-        image = GameObject.Find("Image").GetComponent<Image>();
+        image = GameObject.Find("PlaceImage").GetComponent<Image>();
         description = GameObject.Find("Description").GetComponentInChildren<Text>();
         enterButton = GameObject.Find("EnterButton").GetComponent<Button>();
         exitButton = GameObject.Find("ExitButton").GetComponent<Button>();

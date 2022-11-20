@@ -2647,7 +2647,7 @@ GameObject:
   - component: {fileID: 344301037}
   - component: {fileID: 344301036}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PlaceImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2977,7 +2977,7 @@ MonoBehaviour:
   cardCounts: 
   cards: []
   EnemyBattle: {fileID: 11400000, guid: fc50ca9f8bb9245a2900acadec23af9d, type: 2}
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: 1992a6b873c372f48b4e4fb5ed1e92d4, type: 2}
   enteredBattle: 0
 --- !u!95 &390507413
 Animator:
@@ -8784,7 +8784,7 @@ MonoBehaviour:
   cardCounts: 
   cards: []
   EnemyBattle: {fileID: 11400000, guid: 18becccc4c4504d3da5bc7dcc1919b6a, type: 2}
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: ef87cb114e9547e45b75575b4f7850f8, type: 2}
   enteredBattle: 0
 --- !u!95 &1313543889
 Animator:
@@ -9291,7 +9291,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b0ff57c389cc5449a9383939dec1d9df, type: 2}
   - {fileID: 11400000, guid: b0ff57c389cc5449a9383939dec1d9df, type: 2}
   cardsOffering: []
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: da8aecd16ad093240b0644fa69385138, type: 2}
   background: {fileID: 0}
 --- !u!95 &1388906947
 Animator:
@@ -12382,7 +12382,7 @@ MonoBehaviour:
   cardCounts: 
   cards: []
   EnemyBattle: {fileID: 11400000, guid: c749114d750f647929911c3ac49144e3, type: 2}
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: dd6f6007983d16d40a48b6fffe8897f2, type: 2}
   enteredBattle: 0
 --- !u!95 &1923842306
 Animator:
@@ -12929,7 +12929,7 @@ MonoBehaviour:
   cardCounts: 
   cards: []
   EnemyBattle: {fileID: 11400000, guid: e1e90380b2ec94ca3ae04f0dcfa7c156, type: 2}
-  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  place: {fileID: 11400000, guid: 84f7e094cd2e2a84886b9746ef7b27f3, type: 2}
   enteredBattle: 0
 --- !u!95 &2001492825
 Animator:
