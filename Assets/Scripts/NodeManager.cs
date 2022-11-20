@@ -60,6 +60,7 @@ public class NodeManager : MonoBehaviour
         }
         if (MightyGameBrain.Instance.currentGameStateName != "Village")
         {
+
             if (Input.GetMouseButtonDown(0))
             {
                 //Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
