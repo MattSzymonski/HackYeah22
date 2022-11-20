@@ -7,8 +7,6 @@ public class InfoPanelManager : MonoBehaviour
 {
     private NodeManager nodeManager;
 
-    public Place[] places;
-
     public Text title;
     public Image image;
     public Text description;
@@ -32,17 +30,11 @@ public class InfoPanelManager : MonoBehaviour
         
     }
     
-    public void SetInfo(string name)
+    public void SetInfo(Place place)
     {
-        for(int i = 0; i < places.Length; ++i)
-        {
-            if (places[i].name.Contains(name))
-            {
-                title.text = places[i].name;
-                image.sprite = places[i].image;
-                description.text = places[i].description;
-            }
-        }
+        title.text = place.name;
+        image.sprite = place.image;
+        description.text = place.description;
     }
 
     public void EnterButtonPressed()

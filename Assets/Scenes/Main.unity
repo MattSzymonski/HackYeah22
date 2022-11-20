@@ -235,9 +235,15 @@ MonoBehaviour:
   waveProgression: -1
   PlayerMarker: {fileID: 1433958656}
   speed: 3
-  player: {fileID: 0}
-  infoPanel: {fileID: 0}
+  player: {fileID: 2039401600}
+  infoPanel: {fileID: 1898728510}
   mainGameManager: {fileID: 0}
+--- !u!1 &28823234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 547785544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &77927481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1416,7 +1422,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 206621591}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1313543883}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3c291d7e10945e398282b0c943c30f, type: 3}
@@ -1525,6 +1531,12 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &231302311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 390507405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &248218158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1718,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &253984414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1756318509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &271116251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1923842298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &291630145
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +2888,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 390507405}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 231302311}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3c291d7e10945e398282b0c943c30f, type: 3}
@@ -2876,6 +2900,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 390507405}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &390507410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231302311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cardCounts: 
+  cards: []
+  EnemyBattle: {fileID: 11400000, guid: fc50ca9f8bb9245a2900acadec23af9d, type: 2}
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  enteredBattle: 0
 --- !u!1001 &413019668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3815,7 +3857,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 490784385}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &490784389
+--- !u!114 &490784392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3824,16 +3866,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 490784387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b5c906c3de74214992600e09beda21b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardsToOffer:
-  - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
-  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
-  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
-  cardsOffering: []
-  name: Bydgoszcz
-  background: {fileID: 21300000, guid: d2f1e5a8f9aa8ad49b4ba6498894614f, type: 3}
+  cardNames: []
+  cardCounts: 
+  cards: []
+  EnemyBattle: {fileID: 11400000, guid: 2be4d36511c524a7695af9919ed015b3, type: 2}
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  enteredBattle: 0
 --- !u!1001 &498451832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4012,7 +4053,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   cardsOffering: []
-  name: Bydgoszcz
+  place: {fileID: 11400000, guid: e6aec160642d5f442a1fa723c3a6a101, type: 2}
   background: {fileID: 21300000, guid: d2f1e5a8f9aa8ad49b4ba6498894614f, type: 3}
 --- !u!1 &500780689
 GameObject:
@@ -4484,7 +4525,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 547785544}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 28823234}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3c291d7e10945e398282b0c943c30f, type: 3}
@@ -4496,6 +4537,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 547785544}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &547785549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28823234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5c906c3de74214992600e09beda21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsToOffer:
+  - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
+  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  cardsOffering: []
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  background: {fileID: 21300000, guid: d2f1e5a8f9aa8ad49b4ba6498894614f, type: 3}
 --- !u!1 &567726088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5293,7 +5353,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   cardsOffering: []
-  name: 
+  place: {fileID: 11400000, guid: 852d7be162bb53d4daf7865a46730acf, type: 2}
   background: {fileID: 0}
 --- !u!1 &624463762
 GameObject:
@@ -7662,7 +7722,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   cardsOffering: []
-  name: "Gda\u0144sk"
+  place: {fileID: 11400000, guid: 8af4d201be0f5a14cb0763eff2a34f6c, type: 2}
   background: {fileID: 0}
 --- !u!1 &1070966584
 GameObject:
@@ -8094,7 +8154,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1142167295}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1606226921}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3c291d7e10945e398282b0c943c30f, type: 3}
@@ -8105,6 +8165,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2727212568393508479, guid: 71fb042219aa14f8ba8c90176a82d8f6,
     type: 3}
   m_PrefabInstance: {fileID: 1142167295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1193109210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1977003921}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1213937910
 GameObject:
@@ -8190,6 +8256,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1245883683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2001492817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1264067896
 GameObject:
   m_ObjectHideFlags: 0
@@ -8517,6 +8589,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294001481}
   m_CullTransparentMesh: 1
+--- !u!1 &1313543883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 206621591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1313543886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313543883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cardCounts: 
+  cards: []
+  EnemyBattle: {fileID: 11400000, guid: 18becccc4c4504d3da5bc7dcc1919b6a, type: 2}
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  enteredBattle: 0
 --- !u!1 &1315767228
 GameObject:
   m_ObjectHideFlags: 0
@@ -8983,7 +9079,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1388906937}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1388906941
+--- !u!114 &1388906944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8992,13 +9088,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1388906939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b5c906c3de74214992600e09beda21b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardNames: []
-  cardCounts: 
-  cards: []
-  enteredBattle: 0
+  cardsToOffer:
+  - {fileID: 11400000, guid: ec133ead3efec4049b7bef92f58d2c4a, type: 2}
+  - {fileID: 11400000, guid: ec133ead3efec4049b7bef92f58d2c4a, type: 2}
+  - {fileID: 11400000, guid: d154f4186675e44bdabdc19ea89c9845, type: 2}
+  - {fileID: 11400000, guid: b0ff57c389cc5449a9383939dec1d9df, type: 2}
+  - {fileID: 11400000, guid: b0ff57c389cc5449a9383939dec1d9df, type: 2}
+  cardsOffering: []
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  background: {fileID: 0}
 --- !u!1 &1403298365
 GameObject:
   m_ObjectHideFlags: 0
@@ -9674,6 +9775,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1518880274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2085350042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1523412314
 GameObject:
   m_ObjectHideFlags: 0
@@ -10002,6 +10109,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
   DefaultRotInfluence: {x: 1, y: 1, z: 1}
+--- !u!1 &1606226921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727212568393508476, guid: 71fb042219aa14f8ba8c90176a82d8f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1142167295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1606226924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606226921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cardCounts: 
+  cards: []
+  EnemyBattle: {fileID: 11400000, guid: bb147565d45d34a2492c5668a6849da3, type: 2}
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  enteredBattle: 0
 --- !u!1 &1623148155
 GameObject:
   m_ObjectHideFlags: 0
@@ -11024,12 +11155,30 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1756318509}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 253984414}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3c291d7e10945e398282b0c943c30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1756318514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253984414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cardCounts: 
+  cards: []
+  EnemyBattle: {fileID: 11400000, guid: 1a33d712a76544316887ba4e04d8fe09, type: 2}
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  enteredBattle: 0
 --- !u!1 &1762090997
 GameObject:
   m_ObjectHideFlags: 0
@@ -11721,8 +11870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6184a83d4956f54ca60af57defe0a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  places:
-  - {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
   title: {fileID: 0}
   image: {fileID: 0}
   description: {fileID: 0}
@@ -11953,7 +12100,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1923842298}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 271116251}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3c291d7e10945e398282b0c943c30f, type: 3}
@@ -11965,6 +12112,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1923842298}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1923842303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271116251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cardCounts: 
+  cards: []
+  EnemyBattle: {fileID: 11400000, guid: c749114d750f647929911c3ac49144e3, type: 2}
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  enteredBattle: 0
 --- !u!1 &1934118049
 GameObject:
   m_ObjectHideFlags: 0
@@ -12284,7 +12449,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1977003921}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1193109210}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3c291d7e10945e398282b0c943c30f, type: 3}
@@ -12296,6 +12461,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1977003921}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1977003926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193109210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cardCounts: 
+  cards: []
+  EnemyBattle: {fileID: 11400000, guid: 3c8f2421032374e5c98a7ee8d8bd868d, type: 2}
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  enteredBattle: 0
 --- !u!1001 &2001492817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12424,7 +12607,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2001492817}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1245883683}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3c291d7e10945e398282b0c943c30f, type: 3}
@@ -12436,6 +12619,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2001492817}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2001492822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245883683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cardCounts: 
+  cards: []
+  EnemyBattle: {fileID: 11400000, guid: e1e90380b2ec94ca3ae04f0dcfa7c156, type: 2}
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  enteredBattle: 0
 --- !u!1 &2005252818
 GameObject:
   m_ObjectHideFlags: 0
@@ -12939,7 +13140,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2085350042}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1518880274}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3c291d7e10945e398282b0c943c30f, type: 3}
@@ -12951,6 +13152,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2085350042}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2085350047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518880274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfe6a10b8264487094a7c98dc149579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cardCounts: 
+  cards: []
+  EnemyBattle: {fileID: 11400000, guid: 48611f94ab9724be8a5ce72faced20aa, type: 2}
+  place: {fileID: 11400000, guid: a1ba8ea97349fc34882746d1313fdc84, type: 2}
+  enteredBattle: 0
 --- !u!1 &2091297766
 GameObject:
   m_ObjectHideFlags: 0

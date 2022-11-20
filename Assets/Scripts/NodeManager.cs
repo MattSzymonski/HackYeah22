@@ -102,7 +102,7 @@ public class NodeManager : MonoBehaviour
             foreach(Transform node in NodeLevels[waveProgression].transform)
             {
                 node.gameObject.GetComponent<Node>().invaded = true;
-                node.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
+                node.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             }
         }
 
@@ -113,9 +113,9 @@ public class NodeManager : MonoBehaviour
         Battle battle = currentSelectedNode.gameObject.GetComponent<Battle>();
         var infoPanelManager = infoPanel.GetComponent<InfoPanelManager>();
         if (village)
-            infoPanelManager.SetInfo(village.name);
+            infoPanelManager.SetInfo(village.place);
         else if (battle)
-            infoPanelManager.SetInfo(battle.name);
+            infoPanelManager.SetInfo(battle.place);
 
         mainGameManager.OpenInfoPanel();
     }

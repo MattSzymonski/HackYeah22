@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cac766455f0699c46bcda5d96d8d2e19, type: 3}
-  m_Name: Card_Cannon
+  m_Name: Enemy_Card_Musketeers
   m_EditorClassIdentifier: 
   name: Kolubryna
-  description: "Ci\u0119\u017Cka armata. Dzia\u0142a artleryjne u\u017Cywane w XVI
-    i XVII wieku. "
+  description: BESTIA
   image: {fileID: 21300000, guid: 81b7da8c16c009d42bc9a3309bd20586, type: 3}
-  cost: 8
+  cost: 4
   unitPrefab: {fileID: 6262775410447495871, guid: 1799d5c2506c7414d91ae6299d467b39,
     type: 3}

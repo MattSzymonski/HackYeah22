@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f0baaa16412234c83b85fa98de660c, type: 3}
+  m_Name: Ujscie
+  m_EditorClassIdentifier: 
+  name: "Uj\u015Bcie"
+  year: 1655
+  description: "A small town that literally translates into an estuary. Mentioned
+    as early as in XII century by Gallus Anonymus as the place where Poles fought
+    the Pomeranians over then control of lands.\nInfamous for the capitulation of
+    Polish forces lead by Krzysztof Opali\u0144ski and Andrzej Karol Grudzi\u0144ski
+    to a Swedish army of comparable size ."
+  image: {fileID: 21300000, guid: 81b7da8c16c009d42bc9a3309bd20586, type: 3}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f0baaa16412234c83b85fa98de660c, type: 3}
+  m_Name: Poznan
+  m_EditorClassIdentifier: 
+  name: "Pozna\u0144"
+  year: 2137
+  description: "Known for being taken without fight by traitorous Krzysztof Opali\u0144ski
+    with a promise of civil handling of its occupied population. Sadly, these promises
+    were not held and city's suburbs were burned to the ground. In 1657 finally relieved
+    by the mass mobilization after few months of morbid siege."
+  image: {fileID: 21300000, guid: 81b7da8c16c009d42bc9a3309bd20586, type: 3}
