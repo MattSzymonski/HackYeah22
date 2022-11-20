@@ -62,8 +62,8 @@ public class MainGameManager : MightyGameManager
 
     void UpdateUI()
     {
-        goldText.text = "Z?oto: " + player.GetComponent<Player>().gold;
-        movesText.text = "Progres za: " + nodeManager.GetComponent<NodeManager>().movesLeft;
+        goldText.text = "" + player.GetComponent<Player>().gold;
+        movesText.text = "" + nodeManager.GetComponent<NodeManager>().movesLeft;
     }
 
     public void CloseInfoPanel()
