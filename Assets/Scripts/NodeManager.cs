@@ -102,7 +102,7 @@ public class NodeManager : MonoBehaviour
             foreach(Transform node in NodeLevels[waveProgression].transform)
             {
                 node.gameObject.GetComponent<Node>().invaded = true;
-                node.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
+                node.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             }
         }
 
