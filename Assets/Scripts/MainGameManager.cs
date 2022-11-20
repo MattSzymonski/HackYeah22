@@ -22,6 +22,7 @@ public class MainGameManager : MightyGameManager
     public GameObject player;
 
     public Text goldText;
+    public Text gameOverText;
 
     void Awake()
     {
@@ -32,6 +33,7 @@ public class MainGameManager : MightyGameManager
     {
         brain = MightyGameBrain.Instance;
         goldText = GameObject.Find("Gold").GetComponentInChildren<Text>();
+        gameOverText = GameObject.Find("GameOverPanel").GetComponentInChildren<Text>();
     }
 
     void Update()
@@ -103,10 +105,17 @@ public class MainGameManager : MightyGameManager
         yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel(exitingGameState + "Panel", false, true));
     }
 
-    public void TriggerLosingBattle()
+    public void TriggerLosingBattle(Node currentNode)
     {
-        Debug.Log("You Lose!");
         // if standing on potopped node, trigger losing battle and die
-        // else win
+        if (currentNode.invaded)
+        {
+            Debug.Log("YOU LOST!");
+        }
+        else
+        {
+            // win 
+            gameOverText.text = "Gratulacje!"; // TODO: display some ending info about potop
+        }
     }
 }

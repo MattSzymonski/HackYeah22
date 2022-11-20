@@ -29,14 +29,14 @@ public class PotopManager : MonoBehaviour
         
     }
 
-    public void AdvanceWave()
+    public void AdvanceWave(Node currentnode)
     {
         waves[currentWave].SetActive(false);
         dottedWaves[currentWave].SetActive(false);
         ++currentWave;
         if (currentWave > maxWaves)
         {
-            mainGameManager.TriggerLosingBattle();
+            mainGameManager.TriggerLosingBattle(currentnode);
             return;
         }
         // animations etc for transitions
