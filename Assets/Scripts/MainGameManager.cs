@@ -20,9 +20,11 @@ public class MainGameManager : MightyGameManager
     public GameObject MainMap;
     public GameObject Battle;
     public GameObject player;
+    public GameObject nodeManager;
 
     public Text goldText;
     public Text gameOverText;
+    public Text movesText;
 
     void Awake()
     {
@@ -34,6 +36,7 @@ public class MainGameManager : MightyGameManager
         brain = MightyGameBrain.Instance;
         goldText = GameObject.Find("Gold").GetComponentInChildren<Text>();
         gameOverText = GameObject.Find("GameOverPanel").GetComponentInChildren<Text>();
+        movesText = GameObject.Find("Moves").GetComponentInChildren<Text>();
     }
 
     void Update()
@@ -51,6 +54,7 @@ public class MainGameManager : MightyGameManager
     void UpdateUI()
     {
         goldText.text = "Z?oto: " + player.GetComponent<Player>().gold;
+        movesText.text = "Progres za: " + nodeManager.GetComponent<NodeManager>().movesLeft;
     }
 
     public void CloseInfoPanel()
