@@ -16,7 +16,12 @@ public class Unit : MonoBehaviour
     public bool inCombat = false;
     //private float fixedZ;
     //private Rigidbody2D rb;
-    private float distanceToFormationSlot;
+    public float distanceToFormationSlot;
+    public float attackRange = 1.0f;
+    public float health = 100.0f;
+    public float attackDamage = 10.0f;
+
+
 
     //private GameObject movementTarget;
     // Start is called before the first frame update
@@ -30,16 +35,77 @@ public class Unit : MonoBehaviour
 
     private void Update()
     {
-        FlagFollowLogic();
+        if (inCombat)
+        {
+            CombatLogic();
+        }
+        else
+        {
+            FlagFollowLogic();
+        }
+      
         distanceToFormationSlot = Vector2.Distance(transform.position, formationSlot.position);
-        CombatLogic();
+        if (distanceToFormationSlot > maxDistanceFromFormation)
+        {
+            inCombat = false;
+            chosenEnemy = null;
+        }
+        else if (EnemyNearby() != null) {
+            inCombat = true;
+            chosenEnemy = EnemyNearby();
+        }
+
+        //if (EnemyNearby() == null)
+        //{
+        //    inCombat = false;
+        //    chosenEnemy = null;
+        //}
+
+        if (health < 0)
+        {
+            Die();
+        }
+    }
+
+    GameObject EnemyNearby()
+    {
+        var enemies = Physics2D.OverlapCircleAll(transform.position, enemyDetectionRadius);
+        int closestIndex = -1;
+        float closestDistance = 10000;
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            //if (enemies[i].tag != Utils.ENEMY_TAG)
+            if(CompareTag(enemies[i].tag))
+            {
+                continue;
+            }
+
+            float distance = Vector2.Distance(transform.position, enemies[i].transform.position);
+            if (distance < closestDistance)
+            {
+                closestIndex = i;
+                closestDistance = distance;
+            }
+        }
+
+        if (closestIndex != -1)
+        {
+            return enemies[closestIndex].gameObject;
+        }
+
+        return null;
     }
 
     private void CombatLogic()
     {
-        if (distanceToFormationSlot > maxDistanceFromFormation)
+        float distance = Vector2.Distance(transform.position, chosenEnemy.transform.position);
+        if (distance > attackRange)
         {
-
+            transform.position = Vector2.MoveTowards(transform.position, chosenEnemy.transform.position, speed * Time.deltaTime);
+        } 
+        else
+        {
+            chosenEnemy.GetComponent<Unit>().health -= attackDamage * Time.deltaTime;
         }
     }
 
@@ -49,12 +115,12 @@ public class Unit : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, formationSlot.position, step);
 
         // only for Player units for now TODO: change
-        if (tag == Utils.ENEMY_TAG)
-            return;
+        //if (tag == Utils.ENEMY_TAG)
+        //    return;
         
-        // check if enemy unit in some radius (triggerBox for formationSlot)
-        var enemies = Physics2D.OverlapCircleAll(transform.position, enemyDetectionRadius);//, Utils.ENEMY_LAYER); // TODO: layer does not work?
-        Debug.Log(enemies);
+        //// check if enemy unit in some radius (triggerBox for formationSlot)
+        //var enemies = Physics2D.OverlapCircleAll(transform.position, enemyDetectionRadius);//, Utils.ENEMY_LAYER); // TODO: layer does not work?
+        //Debug.Log(enemies);
         ////if (enemy)
         //foreach(var enemy in enemies)
         //{
@@ -76,19 +142,19 @@ public class Unit : MonoBehaviour
 
     // TODO: implement damaging
     // for now simple collision
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (unitGroup.exitingCombat) //ignore when exiting combat
-            return;
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (unitGroup.exitingCombat) //ignore when exiting combat
+    //        return;
 
-        if (!CompareTag(collision.gameObject.tag)) // for now every other object is enemy
-        {
-            Debug.Log("HitEnemy");
-            // TODO: implement killing logic
-            //collision.gameObject.GetComponent<Unit>().Die(); // for now both of them die
-            collision.gameObject.GetComponentInParent<UnitGroup>().inCombat = true;
-        } 
-    }
+    //    if (!CompareTag(collision.gameObject.tag)) // for now every other object is enemy
+    //    {
+    //        Debug.Log("HitEnemy");
+    //        // TODO: implement killing logic
+    //        //collision.gameObject.GetComponent<Unit>().Die(); // for now both of them die
+    //        collision.gameObject.GetComponentInParent<UnitGroup>().inCombat = true;
+    //    } 
+    //}
 
     private void Die()
     {

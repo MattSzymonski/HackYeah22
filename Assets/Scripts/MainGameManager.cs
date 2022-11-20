@@ -88,6 +88,7 @@ public class MainGameManager : MightyGameManager
         
         if (enteringGameState == "Battle" )
         {
+            Camera.main.orthographicSize = 12;
             MainMap.SetActive(false);
             Battle.SetActive(true);
             currentBattle.SpawnEnemies();
@@ -117,8 +118,12 @@ public class MainGameManager : MightyGameManager
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, true));
         }
 
-        if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state
+        if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state{
+        {
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, false));
+            Camera.main.orthographicSize = 8.3f;
+        }
+            
         
         if(exitingGameState == "Map")
         {
