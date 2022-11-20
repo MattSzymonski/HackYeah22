@@ -6,6 +6,8 @@ public class UnitGroup : MonoBehaviour
 {
     private float fixedZ;
 
+    public int index;
+    public bool dead;
     // Movement controls
     public float speed = 5f;
     public float rotationSpeed = 0.5f;

@@ -61,7 +61,7 @@ public class NodeManager : MonoBehaviour
         if (MightyGameBrain.Instance.currentGameStateName != "Village")
         {
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && MightyGameBrain.Instance.currentGameStateName == "Map")
             {
                 //Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 

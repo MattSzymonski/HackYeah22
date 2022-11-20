@@ -2,13 +2,12 @@ using Mighty;
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
-
 {
-
     GameObject battlePanel;
     Player player;
 
@@ -22,19 +21,72 @@ public class Battle : MonoBehaviour
     public Place place;
 
     public bool enteredBattle = false;
-    private List<Card> enemyCards;
+    private List<Card> enemyCards = new List<Card>();
+
+
+    public List<GameObject> playerUnits = new List<GameObject>();
+    public List<GameObject> enemyUnits = new List<GameObject>();
+
+    public bool battleWon;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = MainGameManager.Instance.player.GetComponent<Player>();
         enemyCards = EnemyBattle.enemyCards;
     }
+
+    List<int> playerIndicesToRemove = new List<int>();
+    int enemyUnitGroupsDead = 0;
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        if (!battleWon)
+        {
+            // Player
+            foreach (var item in playerUnits)
+            {
+                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.active))
+                {
+                    if (!item.GetComponent<UnitGroup>().dead)
+                    {
+                        playerIndicesToRemove.Add(item.GetComponent<UnitGroup>().index);
+                        item.GetComponent<UnitGroup>().dead = true;
+                    }
+                }
+            }
 
+            if (playerIndicesToRemove.Count == player.cards.Count)
+            {
+                MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+            }
+
+            // Enemy
+            foreach (var item in enemyUnits)
+            {
+                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.active))
+                {
+                    if (!item.GetComponent<UnitGroup>().dead)
+                    {
+                        enemyUnitGroupsDead++;
+                        item.GetComponent<UnitGroup>().dead = true;
+                    }
+                }
+            }
+
+            if (enemyUnitGroupsDead == enemyCards.Count)
+            {
+                BattleWon();
+            }
+        }
+    }
+      
+
+    public void BattleWon()
+    {
+        Debug.Log("xxxxxxxxxxxxxxxxxxxxxxxxxxx batle won");
+    }
 
     public void EnterBattle(Player player)
     {
@@ -83,8 +135,9 @@ public class Battle : MonoBehaviour
             spawnedCard.GetComponent<RectTransform>().localPosition = new Vector3(-550 + (550 * i), -350, 0);
             spawnedCard.GetComponent<RectTransform>().localScale = new Vector3(0.5f,0.5f,0.5f);
             spawnedCard.GetComponent<CardVisualization>().index = i;
-            //spawnedCard.GetComponent<CardVisualization>().village = this;
-            spawnedCard.transform.GetChild(0).transform.Find("Illustration").gameObject.GetComponent<Image>().sprite = card.image;
+                spawnedCard.GetComponent<CardVisualization>().battle =this;
+                //spawnedCard.GetComponent<CardVisualization>().village = this;
+                spawnedCard.transform.GetChild(0).transform.Find("Illustration").gameObject.GetComponent<Image>().sprite = card.image;
 
             // Pass the unit prefab to visualization
             spawnedCard.GetComponent<CardVisualization>().unitPrefab = card.unitPrefab;
@@ -109,6 +162,7 @@ public class Battle : MonoBehaviour
             GameObject unit = Instantiate(enemyCards[i].unitPrefab, spawnLocation, Quaternion.identity) as GameObject;
             unit.transform.position = new Vector3(spawnLocation.x, spawnLocation.y, 5);
             unit.GetComponent<UnitGroup>().Spawn();
+            enemyUnits.Add(unit);
         }
         
     }

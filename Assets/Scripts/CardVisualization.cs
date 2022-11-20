@@ -10,6 +10,8 @@ public class CardVisualization : MonoBehaviour
     public bool isBattleCardSelected;
     public GameObject unitPrefab;
 
+    public Battle battle;
+
     private Vector3 cardPosition;
 
     public void Start()
@@ -84,6 +86,9 @@ public class CardVisualization : MonoBehaviour
         GameObject unit = Instantiate(unitPrefab, spawnLocation, Quaternion.identity) as GameObject;
         unit.transform.position = new Vector3(spawnLocation.x, spawnLocation.y, 5);
         unit.GetComponent<UnitGroup>().Spawn();
+
+        battle.playerUnits.Add(unit);
+        unit.GetComponent<UnitGroup>().index = index;
         Despawn();
     }
 
