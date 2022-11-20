@@ -22,6 +22,7 @@ public class MainGameManager : MightyGameManager
     public GameObject Battle;
     public GameObject player;
     public GameObject nodeManager;
+    public Battle currentBattle;
 
     public Text goldText;
     public Text gameOverText;
@@ -89,12 +90,19 @@ public class MainGameManager : MightyGameManager
         {
             MainMap.SetActive(false);
             Battle.SetActive(true);
+            currentBattle.SpawnEnemies();
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
         }
         
         if (enteringGameState == "Map")
         {
             Battle.SetActive(false);
             MainMap.SetActive(true);
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
+        }
+
+        if (enteringGameState == "Village")
+        {
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
         }
 
@@ -111,6 +119,11 @@ public class MainGameManager : MightyGameManager
 
         if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, false));
+        
+        if(exitingGameState == "Map")
+        {
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, true));
+        }
 
 
         yield return new WaitForSeconds(1);

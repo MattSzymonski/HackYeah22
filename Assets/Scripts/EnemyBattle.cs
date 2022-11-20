@@ -13,5 +13,6 @@ public class EnemyBattle : ScriptableObject
     //public Sprite image;
     //public int cost;
     public List<Card> enemyCards;
+    public List<Vector3> enemyPositions;
 }
 
