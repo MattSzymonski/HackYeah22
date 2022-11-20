@@ -91,6 +91,7 @@ public class MainGameManager : MightyGameManager
 
     public void TriggerLosingBattle()
     {
+        Debug.Log("You Lose!");
 
     }
 }
