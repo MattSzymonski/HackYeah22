@@ -121,11 +121,16 @@ public class MainGameManager : MightyGameManager
         if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state{
         {
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, false));
+        }
+
+        if (exitingGameState == "Battle") // Transition panel when leaving GameOver state{
+        {
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, false));
             Camera.main.orthographicSize = 8.3f;
         }
-            
-        
-        if(exitingGameState == "Map")
+
+
+        if (exitingGameState == "Map")
         {
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, true));
         }
