@@ -149,16 +149,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4351aaf78a1a7c542acc77e2dfb2769c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1.5
   enemyDetectionRadius: 2
   formationSlot: {fileID: 0}
   chosenEnemy: {fileID: 0}
+  anim: {fileID: 0}
   maxDistanceFromFormation: 6
   inCombat: 0
   distanceToFormationSlot: 0
   attackRange: 1.5
   health: 100
-  attackDamage: 0.01
+  attackDamage: 4
 --- !u!212 &1165071944323686330
 SpriteRenderer:
   m_ObjectHideFlags: 0
