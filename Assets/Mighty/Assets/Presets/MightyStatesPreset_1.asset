@@ -18,7 +18,7 @@ MonoBehaviour:
 
     Contains 5 game
     states: MainMenu, Settings, Playing, Pause, GameOver'
-  startingGameStateName: MainMenu
+  startingGameStateName: Map
   gameStates:
   - name: MainMenu
     transitionStage: 1

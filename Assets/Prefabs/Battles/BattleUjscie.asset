@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b1ffe503be94a52a7e6ea913dfecf1, type: 3}
   m_Name: BattleUjscie
   m_EditorClassIdentifier: 
-  name: SmallBattle1
+  name: UjscieBattle
   description: 
   enemyCards:
   - {fileID: 11400000, guid: d154f4186675e44bdabdc19ea89c9845, type: 2}
   - {fileID: 11400000, guid: b0ff57c389cc5449a9383939dec1d9df, type: 2}
   - {fileID: 11400000, guid: ec133ead3efec4049b7bef92f58d2c4a, type: 2}
+  enemyPositions:
+  - {x: -5, y: 5, z: 5}
+  - {x: 7, y: 5, z: 5}
+  - {x: -3, y: 3, z: 5}

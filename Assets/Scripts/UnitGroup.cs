@@ -44,25 +44,6 @@ public class UnitGroup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (combatExitTimer.finished && combatExitTimerStarted)
-        {
-            exitingCombat = false;
-            inCombat = false;
-            combatExitTimerStarted = false;
-            Debug.Log("Exited Combat");
-        }
-        else if (exitingCombat && !combatExitTimerStarted)
-        {
-            combatExitTimer.RestartTimer();
-            combatExitTimer.PlayTimer();
-            Debug.Log("Exiting Combat!");
-            combatExitTimerStarted = true;
-        }
-
-        if (selected)
-        {
-            //Debug.Log("Selected!");
-        }
         var step = speed * Time.deltaTime;
         formation.transform.position = Vector2.MoveTowards(formation.transform.position, moveTarget.transform.position, step);
         // rotation
@@ -75,9 +56,6 @@ public class UnitGroup : MonoBehaviour
             float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg + -90.0f;
             formation.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-        //rb.velocity = new Vector3(dest.x, dest.y, 0);
-
-        // update UnitGroups status
         UpdateUnitDeath();
     }
     public void Spawn()

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1165071944323686330}
   - component: {fileID: 1862945903332323760}
   m_Layer: 0
-  m_Name: Unit
-  m_TagString: Untagged
+  m_Name: UnitEnemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &5312057481619716141
 CapsuleCollider2D:
@@ -63,16 +63,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4351aaf78a1a7c542acc77e2dfb2769c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   enemyDetectionRadius: 2
   formationSlot: {fileID: 0}
   chosenEnemy: {fileID: 0}
-  maxDistanceFromFormation: 6
-  inCombat: 0
-  distanceToFormationSlot: 0
-  attackRange: 1.5
-  health: 100
-  attackDamage: 0.001
 --- !u!212 &1165071944323686330
 SpriteRenderer:
   m_ObjectHideFlags: 0

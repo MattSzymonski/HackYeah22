@@ -17,3 +17,6 @@ MonoBehaviour:
   enemyCards:
   - {fileID: 11400000, guid: d154f4186675e44bdabdc19ea89c9845, type: 2}
   - {fileID: 11400000, guid: b0ff57c389cc5449a9383939dec1d9df, type: 2}
+  enemyPositions:
+  - {x: -5, y: 5, z: 5}
+  - {x: 7, y: 5, z: 5}

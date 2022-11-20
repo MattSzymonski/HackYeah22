@@ -22,8 +22,10 @@ public class MainGameManager : MightyGameManager
     public GameObject Battle;
     public GameObject player;
     public GameObject nodeManager;
+    public Battle currentBattle;
 
     public Text goldText;
+    public GameObject goldTextVillageObject;
     public Text gameOverText;
     public Text movesText;
 
@@ -61,8 +63,8 @@ public class MainGameManager : MightyGameManager
 
     void UpdateUI()
     {
-        goldText.text = "Z?oto: " + player.GetComponent<Player>().gold;
-        movesText.text = "Progres za: " + nodeManager.GetComponent<NodeManager>().movesLeft;
+        goldText.text = "" + player.GetComponent<Player>().gold;
+        movesText.text = "" + nodeManager.GetComponent<NodeManager>().movesLeft;
     }
 
     public void CloseInfoPanel()
@@ -87,14 +89,22 @@ public class MainGameManager : MightyGameManager
         
         if (enteringGameState == "Battle" )
         {
+            Camera.main.orthographicSize = 12;
             MainMap.SetActive(false);
             Battle.SetActive(true);
+            currentBattle.SpawnEnemies();
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
         }
         
         if (enteringGameState == "Map")
         {
             Battle.SetActive(false);
             MainMap.SetActive(true);
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
+        }
+
+        if (enteringGameState == "Village")
+        {
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
         }
 
@@ -109,8 +119,22 @@ public class MainGameManager : MightyGameManager
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, true));
         }
 
-        if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state
+        if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state{
+        {
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, false));
+        }
+
+        if (exitingGameState == "Battle") // Transition panel when leaving GameOver state{
+        {
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, false));
+            Camera.main.orthographicSize = 8.3f;
+        }
+
+
+        if (exitingGameState == "Map")
+        {
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, true));
+        }
 
 
         yield return new WaitForSeconds(1);

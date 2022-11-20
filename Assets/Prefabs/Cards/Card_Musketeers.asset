@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac766455f0699c46bcda5d96d8d2e19, type: 3}
   m_Name: Card_Musketeers
   m_EditorClassIdentifier: 
-  name: Kolubryna
+  name: Swordsmen
   description: BESTIA
   image: {fileID: 21300000, guid: 81b7da8c16c009d42bc9a3309bd20586, type: 3}
   cost: 4

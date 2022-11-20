@@ -12,6 +12,8 @@ public class Village : MonoBehaviour
 
     public Place place;
     public Sprite background;
+    public Text goldText;
+    public Text movesText;
     GameObject villagePanel;
 
     Player player;
@@ -24,6 +26,9 @@ public class Village : MonoBehaviour
         {
             MightyGameBrain.Abort("Village has less than 3 cards to offer");
         }
+        goldText = MainGameManager.Instance.goldTextVillageObject.GetComponent<Text>();
+        player = MainGameManager.Instance.player.GetComponent<Player>();
+        Debug.Log(goldText);
 
         for (int i = 0; i < 3; i++)
         {
@@ -36,7 +41,12 @@ public class Village : MonoBehaviour
 
     void Update()
     {
-        
+        UpdateUI();    
+    }
+    void UpdateUI()
+    {
+        goldText.text = "" + player.GetComponent<Player>().gold;
+        //movesText.text = "" + nodeManager.GetComponent<NodeManager>().movesLeft;
     }
 
     public bool Buy(int index)
@@ -49,6 +59,7 @@ public class Village : MonoBehaviour
             player.gold -= card.cost;
             cardsOffering[index] = null;
             player.cards.Add(card);
+            MightyAudioManager.Instance.PlaySound("Coin");
 
             return true;
         }
@@ -60,7 +71,7 @@ public class Village : MonoBehaviour
     {
         this.player = player;
         // Background
-        MainGameManager.Instance.villageBackground.sprite = background;
+        //MainGameManager.Instance.villageBackground.sprite = background;
 
         // Destroy cards and add cards
         GameObject cardsHolder = MainGameManager.Instance.villageCardsHolder;
@@ -84,6 +95,10 @@ public class Village : MonoBehaviour
             spawnedCard.GetComponent<CardVisualization>().index = i;
             spawnedCard.GetComponent<CardVisualization>().village = this;
             spawnedCard.transform.GetChild(0).transform.Find("Illustration").gameObject.GetComponent<Image>().sprite = card.image;
+            // Set cost val
+            spawnedCard.transform.GetChild(0).transform.Find("CostHolder").GetChild(0).gameObject.GetComponent<Text>().text = card.cost.ToString();
+            // Set card description
+            spawnedCard.transform.GetChild(0).transform.Find("Name").gameObject.GetComponent<Text>().text = card.name;
             // Juice in
         }
 
