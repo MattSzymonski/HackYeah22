@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29f0baaa16412234c83b85fa98de660c, type: 3}
-  m_Name: RandomPlace
+  m_Name: Chodziez
   m_EditorClassIdentifier: 
-  name: dupa
+  name: "Chodzie\u017C"
   year: 2137
-  description: "Stary pijany odbija si\u0119 od \u015Bciany\nMatka krzyczy dziecko
-    ryczy "
-  image: {fileID: 21300000, guid: 81b7da8c16c009d42bc9a3309bd20586, type: 3}
+  description: Small rural town boasting a small castle that was captured soon after
+    Swedish invasion. Stefan Czarniecki burned down nearby Leszno town for support
+    that local people gave to the occupying army. Your task is to eliminate last
+    of these forces.
+  image: {fileID: 21300000, guid: 04b93c9e156e1df448017a6138ab3355, type: 3}
