@@ -61,11 +61,14 @@ public class Battle : MonoBehaviour
 
             GameObject spawnedCard = GameObject.Instantiate(MainGameManager.Instance.battleCardPrefab, Vector3.zero, Quaternion.identity);
             spawnedCard.transform.parent = cardsHolder.transform;
-            spawnedCard.GetComponent<RectTransform>().localPosition = new Vector3(-550 + (550 * i), -80, 0);
+            spawnedCard.GetComponent<RectTransform>().localPosition = new Vector3(-550 + (550 * i), -350, 0);
             spawnedCard.GetComponent<RectTransform>().localScale = new Vector3(0.5f,0.5f,0.5f);
             spawnedCard.GetComponent<CardVisualization>().index = i;
             //spawnedCard.GetComponent<CardVisualization>().village = this;
             spawnedCard.transform.GetChild(0).transform.Find("Illustration").gameObject.GetComponent<Image>().sprite = card.image;
+
+            // Pass the unit prefab to visualization
+            spawnedCard.GetComponent<CardVisualization>().unitPrefab = card.unitPrefab;
 
             // Juice in
         }

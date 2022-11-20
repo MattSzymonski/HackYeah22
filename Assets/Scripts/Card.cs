@@ -12,5 +12,6 @@ public class Card : ScriptableObject
     [ResizableTextArea] public string description;
     public Sprite image;
     public int cost;
+    public GameObject unitPrefab;
 }
 
