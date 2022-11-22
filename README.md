@@ -23,6 +23,16 @@ Press 'X' key on keyboard while holding a card to cancel dropping a card.
 Drag the flag associated with a unit squad to make it move there.
 When enemies are nearby, units go towards them unless recalled by using a flag.
 
+## Game preview
+
+Gameplay: https://www.youtube.com/watch?v=fdWl5yQ0ZK0
+
+![image](https://user-images.githubusercontent.com/26546660/203430363-719e83ee-bfe1-4445-80de-29b85b1b9141.png)
+![image](https://user-images.githubusercontent.com/26546660/203430378-d4b09cc8-6b0d-4a67-93b7-9895e20a5781.png)
+![image](https://user-images.githubusercontent.com/26546660/203430741-bdc9c2d7-8dec-4b4c-9d65-40cfd1458c31.png)
+![image](https://user-images.githubusercontent.com/26546660/203430774-f7a7dc54-606c-4ae6-bf9d-b590c00df430.png)
+![image](https://user-images.githubusercontent.com/26546660/203430788-6f3b95b3-1f39-4e51-aa46-70f88c7efadf.png)
+
 
 ## Resources used:
 
