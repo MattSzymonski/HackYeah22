@@ -8740,7 +8740,7 @@ MonoBehaviour:
     soundType: 0
   - name: Debug_Background_Music
     clip: {fileID: 8300000, guid: c14fd1ab41302024cbaf59c09b565330, type: 3}
-    volume: 0.05
+    volume: 0.02
     pitch: 1
     playOnAwake: 1
     loop: 1
