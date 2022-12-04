@@ -59,7 +59,19 @@ public class Battle : MonoBehaviour
 
             if (playerIndicesToRemove.Count == player.cards.Count)
             {
+                if (place.name == "Jasna Góra")
+                {
+                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = "Jasna Góra fortress has fallen, the fate of the war seems to be sealed, polish morale plummeted";
+                    //Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Game Over";
+                    MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+
+                    return;
+                }
+
+                Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = "Your troops have been shattered in battle by the Swedish army";
                 MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+                return;
+                // Set gameover text
             }
 
             // Enemy
@@ -85,7 +97,14 @@ public class Battle : MonoBehaviour
 
     public void BattleWon()
     {
-        Debug.Log("xxxxxxxxxxxxxxxxxxx won");
+        if (place.name == "Jasna Góra")
+        {
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = "Your effort turned the tide of war and allowed the Polish army to gain the strategic initiative";
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Victory!";
+            MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+
+            return;
+        }
 
         MightyGameBrain.Instance.TransitToNextGameState("Map");
         player.gold += Random.Range(2, 5);
@@ -159,22 +178,20 @@ public class Battle : MonoBehaviour
             // For each card spawn the number of repeated cards
             for(int j = 0; j < cardCounts[i]; j++)
             {
-            GameObject spawnedCard = GameObject.Instantiate(MainGameManager.Instance.battleCardPrefab, Vector3.zero, Quaternion.identity);
-            spawnedCard.transform.parent = cardsHolder.transform;
-            spawnedCard.GetComponent<RectTransform>().localPosition = new Vector3(-550 + (550 * i), -350, 0);
-            spawnedCard.GetComponent<RectTransform>().localScale = new Vector3(0.5f,0.5f,0.5f);
-            spawnedCard.GetComponent<CardVisualization>().index = i;
-             //   spawnedCard.GetComponent<CardVisualization>().index = i;
+                GameObject spawnedCard = GameObject.Instantiate(MainGameManager.Instance.battleCardPrefab, Vector3.zero, Quaternion.identity);
+                spawnedCard.transform.parent = cardsHolder.transform;
+                spawnedCard.GetComponent<RectTransform>().localPosition = new Vector3(-550 + (550 * i) + (j * 25), -350 + (j * 20), 0);
+                spawnedCard.GetComponent<RectTransform>().localScale = new Vector3(0.5f,0.5f,0.5f);
+                spawnedCard.GetComponent<CardVisualization>().index = i;
 
                 spawnedCard.GetComponent<CardVisualization>().battle =this;
-                //spawnedCard.GetComponent<CardVisualization>().village = this;
                 spawnedCard.transform.GetChild(0).transform.Find("Illustration").gameObject.GetComponent<Image>().sprite = card.image;
+                spawnedCard.transform.GetChild(0).transform.Find("Name").gameObject.GetComponent<Text>().text = card.name;
 
-            // Pass the unit prefab to visualization
-            spawnedCard.GetComponent<CardVisualization>().unitPrefab = card.unitPrefab;
-            // Juice in
+                // Pass the unit prefab to visualization
+                spawnedCard.GetComponent<CardVisualization>().unitPrefab = card.unitPrefab;
+                // Juice in
             }
-
         }
 
         enteredBattle = true;

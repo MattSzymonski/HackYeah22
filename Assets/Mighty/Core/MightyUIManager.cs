@@ -159,6 +159,7 @@ namespace Mighty
             MightyUIPanel uiPanel;
             if(uiPanelMap.TryGetValue(uiPanelName, out uiPanel))
             {
+                uiPanel.active = open;
                 uiPanel.TriggerTransition("Open", open);
 
                 if (wait)
@@ -166,7 +167,7 @@ namespace Mighty
                     string stateToWaitFor = open ? "Open" : "Close";
                     yield return new WaitUntil(() => uiPanel.IsTransitionCompleted(stateToWaitFor));
                 }
-                uiPanel.active = open;
+                
             }
             else
             {

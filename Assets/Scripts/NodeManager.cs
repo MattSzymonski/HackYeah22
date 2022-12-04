@@ -94,19 +94,6 @@ public class NodeManager : MonoBehaviour
 
     void PlayerMarkerMoved()
     {
-        if (movesMade % movesForWaveProgression == 0)
-        {
-            waveProgression++;
-            potopManager.AdvanceWave(currentSelectedNode);
-            // TODO CHECK IF WAVE PROGRESSION IS EQUAL TO TOTAL LEVELS
-
-            foreach(Transform node in NodeLevels[waveProgression].transform)
-            {
-                node.gameObject.GetComponent<Node>().invaded = true;
-                node.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            }
-        }
-
         // Display the UI info about this node
         // If village exists, enter village
         Village village = currentSelectedNode.gameObject.GetComponent<Village>();
@@ -119,6 +106,14 @@ public class NodeManager : MonoBehaviour
             infoPanelManager.SetInfo(battle.place);
 
         mainGameManager.OpenInfoPanel();
+
+
+        if (movesMade % movesForWaveProgression == 0)
+        {
+            waveProgression++;
+            potopManager.AdvanceWave(currentSelectedNode, NodeLevels, waveProgression);
+            // TODO CHECK IF WAVE PROGRESSION IS EQUAL TO TOTAL LEVELS
+        }
     }
 
     public void EnterNode()

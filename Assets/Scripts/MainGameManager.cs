@@ -92,7 +92,7 @@ public class MainGameManager : MightyGameManager
         
         if (enteringGameState == "Battle" )
         {
-            Camera.main.orthographicSize = 12;
+            Camera.main.orthographicSize = 8;
             MainMap.SetActive(false);
             Battle.SetActive(true);
             currentBattle.SpawnEnemies();
@@ -150,6 +150,10 @@ public class MainGameManager : MightyGameManager
         // if standing on potopped node, trigger losing battle and die
         if (currentNode.invaded)
         {
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = "You did not help polish troops besieged in Jasna Góra fortress";
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Game Over";
+            MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+
             Debug.Log("YOU LOST!");
         }
         else
