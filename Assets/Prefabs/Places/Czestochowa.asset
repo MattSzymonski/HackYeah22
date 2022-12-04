@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f0baaa16412234c83b85fa98de660c, type: 3}
   m_Name: Czestochowa
   m_EditorClassIdentifier: 
-  name: "Cz\u0119stochowa"
+  name: "Jasna G\xF3ra"
   year: 1655
   description: "A turning point in the events happening during the Deluge. Led by
     father Augustyn Kordecki, valiant defenders of Jasna G\xF3ra played a sleight

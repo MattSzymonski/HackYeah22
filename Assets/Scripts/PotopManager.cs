@@ -1,4 +1,5 @@
 using Mighty;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,11 +62,22 @@ public class PotopManager : MonoBehaviour
             node.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.0f, 0.0f);
 
             // if player is in invaded node
-            if (node == advanceNode)
+            if (node == advanceNode.transform)
             {
-                Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = "Your troops have been captured by advancing Swedish army";
-                Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Game Over";
-                MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+                IEnumerator Delay()
+                {
+                    yield return new WaitForSeconds(10);
+                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Your troops have been captured by advancing Swedish army";
+                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Game Over";
+                    MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+                }
+
+                StartCoroutine(Delay());
+
+                //Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Your troops have been captured by advancing Swedish army";
+                //Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Game Over";
+                //MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+                return;
             }
         }
     }

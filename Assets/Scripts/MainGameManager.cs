@@ -84,7 +84,7 @@ public class MainGameManager : MightyGameManager
     {
         if (enteringGameState == "GameOver")
         {
-            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
+            //yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
         }
 
         if (exitingGameState == "GameOver") // Transition panel when leaving GameOver state
@@ -112,6 +112,11 @@ public class MainGameManager : MightyGameManager
         }
 
         yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel(enteringGameState + "Panel", true, true));
+
+        if (enteringGameState == "GameOver")
+        {
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
+        }
     }
 
     // This is called by MightyGameBrain on every game state exit (you decide to handle it or not)
@@ -150,8 +155,8 @@ public class MainGameManager : MightyGameManager
         // if standing on potopped node, trigger losing battle and die
         if (currentNode.invaded)
         {
-            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = "You did not help polish troops besieged in Jasna Góra fortress";
-            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Game Over";
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "You did not help polish troops besieged in Jasna Góra fortress";
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Game Over";
             MightyGameBrain.Instance.TransitToNextGameState("GameOver");
 
             Debug.Log("YOU LOST!");

@@ -61,14 +61,17 @@ public class Battle : MonoBehaviour
             {
                 if (place.name == "Jasna Góra")
                 {
-                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = "Jasna Góra fortress has fallen, the fate of the war seems to be sealed, polish morale plummeted";
+                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Jasna Góra fortress has fallen, the fate of the war seems to be sealed, polish morale plummeted";
                     //Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Game Over";
                     MightyGameBrain.Instance.TransitToNextGameState("GameOver");
 
                     return;
                 }
 
-                Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = "Your troops have been shattered in battle by the Swedish army";
+                //Transform a = Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1);
+                //a.GetChild(1).GetComponent<Text>().text = "Your troops have been shattered in battle by the Swedish army";
+                Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Your troops have been shattered in battle by the Swedish army";
+
                 MightyGameBrain.Instance.TransitToNextGameState("GameOver");
                 return;
                 // Set gameover text
@@ -99,8 +102,8 @@ public class Battle : MonoBehaviour
     {
         if (place.name == "Jasna Góra")
         {
-            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = "Your effort turned the tide of war and allowed the Polish army to gain the strategic initiative";
-            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Victory!";
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Your effort turned the tide of war and allowed the Polish army to gain the strategic initiative";
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Victory!";
             MightyGameBrain.Instance.TransitToNextGameState("GameOver");
 
             return;
