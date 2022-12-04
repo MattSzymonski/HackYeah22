@@ -28,7 +28,6 @@ public class Village : MonoBehaviour
         }
         goldText = MainGameManager.Instance.goldTextVillageObject.GetComponent<Text>();
         player = MainGameManager.Instance.player.GetComponent<Player>();
-        Debug.Log(goldText);
 
         for (int i = 0; i < 3; i++)
         {
@@ -39,10 +38,6 @@ public class Village : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        UpdateUI();    
-    }
     void UpdateUI()
     {
         goldText.text = "" + player.GetComponent<Player>().gold;
@@ -61,9 +56,11 @@ public class Village : MonoBehaviour
             player.cards.Add(card);
             //MightyAudioManager.Instance.PlaySound("Coin");
 
+            UpdateUI();    // Update gold count
             return true;
         }
 
+        UpdateUI();    // Update gold count
         return false;
     }
 
@@ -104,6 +101,7 @@ public class Village : MonoBehaviour
 
         // Transite
         MightyGameBrain.Instance.TransitToNextGameState("Village");
+        UpdateUI();    // Update gold count
 
         //villagePanel.transform.Find("Cards");
 
