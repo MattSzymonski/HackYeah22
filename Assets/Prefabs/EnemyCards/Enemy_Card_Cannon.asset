@@ -17,5 +17,5 @@ MonoBehaviour:
     i XVII wieku. "
   image: {fileID: 21300000, guid: 81b7da8c16c009d42bc9a3309bd20586, type: 3}
   cost: 8
-  unitPrefab: {fileID: 6262775410447495871, guid: a576d2e5da26546e4828b75ef4fb5106,
+  unitPrefab: {fileID: 6262775410447495871, guid: dfbaac75dcf6223448c74e9fb8ff40e9,
     type: 3}
