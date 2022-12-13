@@ -2,7 +2,7 @@
 
 ## Intro to game
 
-Year 1655 was not gentle for Polish-Lithuanian Commonwealth. After Cossak-Polish War lead by Bogdan Chmielnicki ravaged most of nowadays Ukraine and Lithuania heavily incapacitating Commonwealth prowess, yet another threat loomed over the Kingdom.
+Year 1655 was not gentle for Polish-Lithuanian Commonwealth. After Cossack-Polish War lead by Bogdan Chmielnicki ravaged most of nowadays Ukraine and Lithuania heavily incapacitating Commonwealth prowess, yet another threat loomed over the Kingdom.
 
 The Deluge...
 
@@ -10,6 +10,14 @@ One would think that after the Treaty of Stuhmsdorf the enmity between Swedish C
 
 It is you who aids the Commonwealth of 1655 as a simple Nobleman or a Noblewoman assembling their own army and participating in several pivotal battles of this period.
 
+PL:
+Rok 1655 nie był łagodny dla Rzeczpospolitej Polsko-Litewskiej. Po tym, jak wojna Kozacko-Polska pod wodzą Bogdana Chmielnickiego spustoszyła większość dzisiejszej Ukrainy i Litwy, mocno osłabiając gotowość do walki Rzeczypospolitej, nad Królestwem zawisło kolejne zagrożenie.
+
+Potop Szwedzki...
+
+Można by pomyśleć że po traktacie Stuhmsdorfskim wrogość między Koroną Szwedzką a Rzecząpospolitą wygasłaby. Wręcz przeciwnie, jest to opowieść o przebiegłych posunięciach politycznych, zdradzie i ogromnej odwadze zwykłych ludzi.
+
+To ty pomagasz Rzeczypospolitej z 1655 roku jako zwykły szlachcic lub szlachcianka, gromadząc własną armię i uczestnicząc w kilku kluczowych bitwach tego okresu.
 
 ## Movement:
 Click on a house or sword icon to move your character to this location
