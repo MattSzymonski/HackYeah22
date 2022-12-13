@@ -1,0 +1,11 @@
+Movement:
+Click on a house or sword icon to move your character to this location
+
+Choosing a card:
+Select a card that is currently highlighted and add it to your deck
+
+Battle Screen:
+Drag and drop cards from your deck to spawn units.
+Press 'X' key on keyboard while holding a card to cancel dropping a card.
+Drag the flag associated with a unit squad to make it move there.
+When enemies are nearby, units go towards them unless recalled by using a flag.
