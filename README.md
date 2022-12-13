@@ -30,9 +30,9 @@ Gameplay: https://www.youtube.com/watch?v=fdWl5yQ0ZK0
 ![image](https://user-images.githubusercontent.com/26546660/203430363-719e83ee-bfe1-4445-80de-29b85b1b9141.png)
 ![image](https://user-images.githubusercontent.com/26546660/203430378-d4b09cc8-6b0d-4a67-93b7-9895e20a5781.png)
 ![image](https://user-images.githubusercontent.com/26546660/203430741-bdc9c2d7-8dec-4b4c-9d65-40cfd1458c31.png)
-![image](https://user-images.githubusercontent.com/26546660/203430774-f7a7dc54-606c-4ae6-bf9d-b590c00df430.png)
-![image](https://user-images.githubusercontent.com/26546660/203430788-6f3b95b3-1f39-4e51-aa46-70f88c7efadf.png)
-
+<img width="1528" alt="Screenshot 2022-12-13 at 12 29 54" src="https://user-images.githubusercontent.com/26546660/207306456-ca868af3-31de-458b-9896-66aa122b5266.png">
+<img width="1529" alt="Screenshot 2022-12-13 at 12 26 53" src="https://user-images.githubusercontent.com/26546660/207306071-2dd13ad1-9fc1-4f9a-b563-0e86970786b8.png">
+<img width="1524" alt="Screenshot 2022-12-13 at 12 31 56" src="https://user-images.githubusercontent.com/26546660/207306738-a47e8ab6-9436-4664-8d16-8109c81f0eca.png">
 
 ## Resources used:
 
@@ -46,6 +46,9 @@ https://www.shutterstock.com/image-photo/old-paper-parchment-scrolls-set-isolate
 
 *Sticky Piston Studios*
 
+
 Mateusz Szymonski
 Jakub Duchniewicz
 Szymon Duchniewicz
+
+
