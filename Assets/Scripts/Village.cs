@@ -86,7 +86,7 @@ public class Village : MonoBehaviour
             }
 
             GameObject spawnedCard = GameObject.Instantiate(MainGameManager.Instance.cardPrefab, Vector3.zero, Quaternion.identity);
-            spawnedCard.transform.parent = cardsHolder.transform;
+            spawnedCard.transform.parent.SetParent(cardsHolder.transform, worldPositionStays: false);
             spawnedCard.GetComponent<RectTransform>().localPosition = new Vector3(-550 + (550 * i), -40, 0);
             spawnedCard.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
             spawnedCard.GetComponent<CardVisualization>().index = i;

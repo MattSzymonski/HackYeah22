@@ -8,7 +8,7 @@ using UnityEngine;
 public class Place : ScriptableObject
 {
     public Guid id;
-    public string name;
+    public string placeName;
     public int year;
     [ResizableTextArea] public string description;
     public Sprite image;

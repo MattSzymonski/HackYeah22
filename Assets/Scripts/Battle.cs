@@ -48,7 +48,7 @@ public class Battle : MonoBehaviour
             // Player
             foreach (var item in playerUnits)
             {
-                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.active))
+                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.activeInHierarchy))
                 {
                     if (!item.GetComponent<UnitGroup>().dead)
                     {
@@ -60,7 +60,7 @@ public class Battle : MonoBehaviour
 
             if (playerIndicesToRemove.Count == player.cards.Count)
             {
-                if (place.name == "Jasna Góra" || EnemyBattle.name == "battleJasnaGora")
+                if (place.placeName == "Jasna Góra" || EnemyBattle.battleName == "battleJasnaGora")
                 {
                     Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Jasna Góra fortress has fallen, the fate of the war seems to be sealed, Polish morale plummeted";
                     //Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Game Over";
@@ -81,7 +81,7 @@ public class Battle : MonoBehaviour
             // Enemy
             foreach (var item in enemyUnits)
             {
-                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.active))
+                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.activeInHierarchy))
                 {
                     if (!item.GetComponent<UnitGroup>().dead)
                     {
@@ -104,7 +104,7 @@ public class Battle : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
 
-        if (place.name == "Jasna Góra" || EnemyBattle.name == "battleJasnaGora")
+        if (place.placeName == "Jasna Góra" || EnemyBattle.battleName == "battleJasnaGora")
         {
             Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Your effort turned the tide of war and allowed the Polish army to gain the strategic initiative";
             Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Victory!";
@@ -184,7 +184,7 @@ public class Battle : MonoBehaviour
             for(int j = 0; j < cardCounts[i]; j++)
             {
                 GameObject spawnedCard = GameObject.Instantiate(MainGameManager.Instance.battleCardPrefab, Vector3.zero, Quaternion.identity);
-                spawnedCard.transform.parent = cardsHolder.transform;
+                spawnedCard.transform.SetParent(cardsHolder.transform, worldPositionStays: false);
                 spawnedCard.GetComponent<RectTransform>().localPosition = new Vector3(-550 + (550 * i) + (j * 25), -350 + (j * 20), 0);
                 spawnedCard.GetComponent<RectTransform>().localScale = new Vector3(0.5f,0.5f,0.5f);
                 spawnedCard.GetComponent<CardVisualization>().index = i;
