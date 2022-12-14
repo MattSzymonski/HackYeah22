@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Piechota
   description: 
-  image: {fileID: 21300000, guid: ba0925fb828c67f4a92e7dfb88365d4d, type: 3}
+  image: {fileID: 21300000, guid: f638425d1e985c04ba752825be52d657, type: 3}
   cost: 3
   unitPrefab: {fileID: 6262775410447495871, guid: a576d2e5da26546e4828b75ef4fb5106,
     type: 3}

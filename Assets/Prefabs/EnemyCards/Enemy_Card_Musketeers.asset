@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Kolubryna
   description: BESTIA
-  image: {fileID: 21300000, guid: 81b7da8c16c009d42bc9a3309bd20586, type: 3}
+  image: {fileID: 21300000, guid: 98b765a522c15f948a5f34641744999b, type: 3}
   cost: 4
   unitPrefab: {fileID: 6262775410447495871, guid: 13d6b0415f480e940b08b2a5bba9ba14,
     type: 3}
