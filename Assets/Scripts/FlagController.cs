@@ -18,6 +18,7 @@ public class FlagController : MonoBehaviour
         startPosition = transform.position;
         unitGroup = gameObject.GetComponentInParent<UnitGroup>();
         fixedZ = transform.position.z;
+        UnityEngine.Cursor.lockState = CursorLockMode.Confined; // apparently does not work on Mac OS
     }
 
     void Update()
@@ -48,7 +49,7 @@ public class FlagController : MonoBehaviour
         unitGroup.selected = true;
         //if (!unitGroup.selected)
             //return;
-
+        
         offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
     }
 

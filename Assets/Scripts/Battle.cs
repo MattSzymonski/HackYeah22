@@ -22,6 +22,7 @@ public class Battle : MonoBehaviour
 
     public bool enteredBattle = false;
     private List<Card> enemyCards = new List<Card>();
+    public float battleDelayTime = 1.5f;
 
 
     public List<GameObject> playerUnits = new List<GameObject>();
@@ -92,25 +93,28 @@ public class Battle : MonoBehaviour
 
             if (enemyUnitGroupsDead == enemyCards.Count)
             {
-                BattleWon();
+
+                StartCoroutine(BattleWon(battleDelayTime));
             }
         }
     }
       
 
-    public void BattleWon()
+    public IEnumerator BattleWon(float delayTime)
     {
+        yield return new WaitForSeconds(delayTime);
+
         if (place.name == "Jasna Góra")
         {
             Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Your effort turned the tide of war and allowed the Polish army to gain the strategic initiative";
             Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Victory!";
             MightyGameBrain.Instance.TransitToNextGameState("GameOver");
 
-            return;
+            yield break;
         }
 
-        MightyGameBrain.Instance.TransitToNextGameState("Map");
-        player.gold += Random.Range(2, 5);
+        MightyGameBrain.Instance.TransitToNextGameState("Map"); // TODO: add a battle won/lost screen with nr of gold displayed
+        player.gold += Random.Range(2, 5); // TODO: add a predefined amount of gold
         battleWon = true;
 
         for (int i = player.cards.Count - 1; i >= 0; i--)
@@ -139,8 +143,6 @@ public class Battle : MonoBehaviour
 
     public void EnterBattle(Player player)
     {
-
-        GameObject pare = new GameObject();
         //Debug.Log("Entered battle");
         //Debug.Log("Player has " + player.cards.Count + " cards");
         //Debug.Log("Resolve: if player has more cards than enemy, player wins");
