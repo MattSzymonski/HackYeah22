@@ -8,7 +8,7 @@ using UnityEngine;
 public class Card : ScriptableObject
 {
     public Guid id;
-    public string cardName;
+    public string name;
     [ResizableTextArea] public string description;
     public Sprite image;
     public int cost;

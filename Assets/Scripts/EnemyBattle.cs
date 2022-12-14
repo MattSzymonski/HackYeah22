@@ -8,7 +8,7 @@ using UnityEngine;
 public class EnemyBattle : ScriptableObject
 {
     public Guid id;
-    public string battleName;
+    public string name;
     [ResizableTextArea] public string description;
     //public Sprite image;
     //public int cost;

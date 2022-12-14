@@ -32,7 +32,7 @@ public class InfoPanelManager : MonoBehaviour
     
     public void SetInfo(Place place)
     {
-        title.text = place.placeName;
+        title.text = place.name;
         image.sprite = place.image;
         description.text = place.description;
     }
