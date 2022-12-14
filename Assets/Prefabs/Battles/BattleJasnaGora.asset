@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b1ffe503be94a52a7e6ea913dfecf1, type: 3}
   m_Name: BattleJasnaGora
   m_EditorClassIdentifier: 
-  name: SmallBattle1
+  name: battleJasnaGora
   description: 
   enemyCards:
   - {fileID: 11400000, guid: d154f4186675e44bdabdc19ea89c9845, type: 2}

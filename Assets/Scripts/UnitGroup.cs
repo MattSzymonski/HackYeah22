@@ -86,8 +86,9 @@ public class UnitGroup : MonoBehaviour
     {
         if (squadMembers.TrueForAll(g => g.activeSelf == false))
         {
-           // Debug.Log("All Dead");
+            // Debug.Log("All Dead");
             //gameObject.SetActive(false);
+            moveTarget.gameObject.SetActive(false);
         }
     }
 

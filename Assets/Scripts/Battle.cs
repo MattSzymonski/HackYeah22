@@ -59,9 +59,9 @@ public class Battle : MonoBehaviour
 
             if (playerIndicesToRemove.Count == player.cards.Count)
             {
-                if (place.name == "Jasna Góra")
+                if (place.name == "Jasna GÃ³ra" || EnemyBattle.name == "battleJasnaGora")
                 {
-                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Jasna Góra fortress has fallen, the fate of the war seems to be sealed, polish morale plummeted";
+                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Jasna GÃ³ra fortress has fallen, the fate of the war seems to be sealed, Polish morale plummeted";
                     //Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Game Over";
                     MightyGameBrain.Instance.TransitToNextGameState("GameOver");
 
@@ -100,7 +100,7 @@ public class Battle : MonoBehaviour
 
     public void BattleWon()
     {
-        if (place.name == "Jasna Góra")
+        if (place.name == "Jasna GÃ³ra" || EnemyBattle.name == "battleJasnaGora")
         {
             Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Your effort turned the tide of war and allowed the Polish army to gain the strategic initiative";
             Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Victory!";
