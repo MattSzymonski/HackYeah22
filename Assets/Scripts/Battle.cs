@@ -48,7 +48,7 @@ public class Battle : MonoBehaviour
             // Player
             foreach (var item in playerUnits)
             {
-                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.active))
+                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.activeInHierarchy))
                 {
                     if (!item.GetComponent<UnitGroup>().dead)
                     {
@@ -81,7 +81,7 @@ public class Battle : MonoBehaviour
             // Enemy
             foreach (var item in enemyUnits)
             {
-                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.active))
+                if (item.GetComponent<UnitGroup>().squadMembers.All(x => !x.activeInHierarchy))
                 {
                     if (!item.GetComponent<UnitGroup>().dead)
                     {
@@ -184,7 +184,7 @@ public class Battle : MonoBehaviour
             for(int j = 0; j < cardCounts[i]; j++)
             {
                 GameObject spawnedCard = GameObject.Instantiate(MainGameManager.Instance.battleCardPrefab, Vector3.zero, Quaternion.identity);
-                spawnedCard.transform.parent = cardsHolder.transform;
+                spawnedCard.transform.parent.SetParent(cardsHolder.transform, worldPositionStays: false);
                 spawnedCard.GetComponent<RectTransform>().localPosition = new Vector3(-550 + (550 * i) + (j * 25), -350 + (j * 20), 0);
                 spawnedCard.GetComponent<RectTransform>().localScale = new Vector3(0.5f,0.5f,0.5f);
                 spawnedCard.GetComponent<CardVisualization>().index = i;
