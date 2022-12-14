@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class UnitGroup : MonoBehaviour
 {
@@ -29,7 +30,6 @@ public class UnitGroup : MonoBehaviour
     public FlagController moveTarget;
 
     public bool selected = false;
-    public bool inCombat = false;
     public bool exitingCombat = false;
     public bool isEnemy = false;
 
@@ -96,5 +96,9 @@ public class UnitGroup : MonoBehaviour
     {
         //DebugExtension.DebugWireSphere(army.position, Color.yellow, spawnRadius);
     }
-
+ 
+    public bool IsInCombat()
+    {
+        return squadMembers.Any((x) => x.GetComponent<Unit>().inCombat == true);
+    }
 }

@@ -23,7 +23,7 @@ public class FlagController : MonoBehaviour
 
     void Update()
     {
-        if (unitGroup.inCombat)
+        if (unitGroup.IsInCombat())
         {
             return;
         }
@@ -36,7 +36,6 @@ public class FlagController : MonoBehaviour
     void Patrol()
     {
         transform.position = startPosition + new Vector2(Mathf.PingPong(Time.time, 10.0f), 0.0f);
-
     }
     
 
@@ -55,7 +54,7 @@ public class FlagController : MonoBehaviour
 
     void OnMouseDrag()
     {
-        if(isEnemy)
+        if (isEnemy)
         {
             return;
         }
@@ -68,7 +67,7 @@ public class FlagController : MonoBehaviour
 
     void OnMouseUp()
     {
-        if(isEnemy)
+        if (isEnemy)
         {
             return;
         }
