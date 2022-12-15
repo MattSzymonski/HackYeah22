@@ -2996,6 +2996,7 @@ MonoBehaviour:
   EnemyBattle: {fileID: 11400000, guid: fc50ca9f8bb9245a2900acadec23af9d, type: 2}
   place: {fileID: 11400000, guid: 1992a6b873c372f48b4e4fb5ed1e92d4, type: 2}
   enteredBattle: 0
+  battleDelayTime: 1.5
   playerUnits: []
   enemyUnits: []
   battleWon: 0
@@ -4010,6 +4011,7 @@ MonoBehaviour:
   EnemyBattle: {fileID: 11400000, guid: 2be4d36511c524a7695af9919ed015b3, type: 2}
   place: {fileID: 11400000, guid: a4c393dd435927340896ff3905c27dc8, type: 2}
   enteredBattle: 0
+  battleDelayTime: 1.5
   playerUnits: []
   enemyUnits: []
   battleWon: 0
@@ -9006,6 +9008,7 @@ MonoBehaviour:
   EnemyBattle: {fileID: 11400000, guid: 18becccc4c4504d3da5bc7dcc1919b6a, type: 2}
   place: {fileID: 11400000, guid: ef87cb114e9547e45b75575b4f7850f8, type: 2}
   enteredBattle: 0
+  battleDelayTime: 1.5
   playerUnits: []
   enemyUnits: []
   battleWon: 0
@@ -10762,6 +10765,7 @@ MonoBehaviour:
   EnemyBattle: {fileID: 11400000, guid: bb147565d45d34a2492c5668a6849da3, type: 2}
   place: {fileID: 11400000, guid: ccd65811535ec7c489beea4ac825cf0a, type: 2}
   enteredBattle: 0
+  battleDelayTime: 1.5
   playerUnits: []
   enemyUnits: []
   battleWon: 0
@@ -11872,6 +11876,7 @@ MonoBehaviour:
   EnemyBattle: {fileID: 11400000, guid: 1a33d712a76544316887ba4e04d8fe09, type: 2}
   place: {fileID: 11400000, guid: fb13cc855fc8e2646b2f087ba182f2e4, type: 2}
   enteredBattle: 0
+  battleDelayTime: 1.5
   playerUnits: []
   enemyUnits: []
   battleWon: 0
@@ -12850,6 +12855,7 @@ MonoBehaviour:
   EnemyBattle: {fileID: 11400000, guid: c749114d750f647929911c3ac49144e3, type: 2}
   place: {fileID: 11400000, guid: dd6f6007983d16d40a48b6fffe8897f2, type: 2}
   enteredBattle: 0
+  battleDelayTime: 1.5
   playerUnits: []
   enemyUnits: []
   battleWon: 0
@@ -13383,6 +13389,7 @@ MonoBehaviour:
   EnemyBattle: {fileID: 11400000, guid: 3c8f2421032374e5c98a7ee8d8bd868d, type: 2}
   place: {fileID: 11400000, guid: 32edd45b58ceb914e87b296e0098b67b, type: 2}
   enteredBattle: 0
+  battleDelayTime: 1.5
   playerUnits: []
   enemyUnits: []
   battleWon: 0
@@ -13569,6 +13576,7 @@ MonoBehaviour:
   EnemyBattle: {fileID: 11400000, guid: e1e90380b2ec94ca3ae04f0dcfa7c156, type: 2}
   place: {fileID: 11400000, guid: 84f7e094cd2e2a84886b9746ef7b27f3, type: 2}
   enteredBattle: 0
+  battleDelayTime: 1.5
   playerUnits: []
   enemyUnits: []
   battleWon: 0
@@ -14179,6 +14187,7 @@ MonoBehaviour:
   EnemyBattle: {fileID: 11400000, guid: 48611f94ab9724be8a5ce72faced20aa, type: 2}
   place: {fileID: 11400000, guid: 49f4bc9d99edfa74eb13a3b7ae61708a, type: 2}
   enteredBattle: 0
+  battleDelayTime: 1.5
   playerUnits: []
   enemyUnits: []
   battleWon: 0

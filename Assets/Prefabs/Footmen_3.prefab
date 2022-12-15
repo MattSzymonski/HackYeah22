@@ -674,8 +674,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.1292121, y: 2.25207, z: 0.2}
+  m_Center: {x: 0.00000011920929, y: 0.9051616, z: 0}
 --- !u!114 &6262775409098855794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +689,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolLength: {x: 10, y: 0}
+  patrollingSpeed: 0.7
+  circlePatrollingRadius: 2
 --- !u!1 &6262775410447495871
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +724,7 @@ Transform:
   - {fileID: 1041009157}
   - {fileID: 4369779804818335495}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6262775410447495857
 MonoBehaviour:
@@ -750,7 +752,6 @@ MonoBehaviour:
   army: {fileID: 1041009156}
   moveTarget: {fileID: 6262775409098855794}
   selected: 0
-  inCombat: 0
   exitingCombat: 0
   isEnemy: 0
   combatExitTimer:
