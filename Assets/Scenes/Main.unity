@@ -1765,7 +1765,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 1ef37395250133e4e84ef12c165e5e45,
+      objectReference: {fileID: 12800000, guid: a4ea32f18ed6a1c45a68b5c2fab5777d,
         type: 3}
     - target: {fileID: 7575550159310510405, guid: f1cb6ce4c4e46e447805b2309bf904d1,
         type: 3}
@@ -1781,22 +1781,22 @@ PrefabInstance:
     - target: {fileID: 7575550159713405921, guid: f1cb6ce4c4e46e447805b2309bf904d1,
         type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.44313726
       objectReference: {fileID: 0}
     - target: {fileID: 7575550159713405921, guid: f1cb6ce4c4e46e447805b2309bf904d1,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.16037738
+      value: 0.58431375
       objectReference: {fileID: 0}
     - target: {fileID: 7575550159713405921, guid: f1cb6ce4c4e46e447805b2309bf904d1,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.16037738
+      value: 0.58431375
       objectReference: {fileID: 0}
     - target: {fileID: 7575550159713405921, guid: f1cb6ce4c4e46e447805b2309bf904d1,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.16037738
+      value: 0.58431375
       objectReference: {fileID: 0}
     - target: {fileID: 7575550159713405922, guid: f1cb6ce4c4e46e447805b2309bf904d1,
         type: 3}
@@ -4869,14 +4869,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.85882354, g: 0.85882354, b: 0.85882354, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6760413, b: 0.6760413, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 074123e742d3a4a00a0c0d97a8146fab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df835afc4c7424c5da0395f919404682, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6393,7 +6393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6402,11 +6402,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a4ea32f18ed6a1c45a68b5c2fab5777d, type: 3}
-    m_FontSize: 33
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 43
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -8516,7 +8516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8525,11 +8525,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a4ea32f18ed6a1c45a68b5c2fab5777d, type: 3}
-    m_FontSize: 33
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 43
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -8849,7 +8849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8858,11 +8858,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a4ea32f18ed6a1c45a68b5c2fab5777d, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 53
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -9760,7 +9760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10535,7 +10535,7 @@ MonoBehaviour:
   previousGameStateName: None
   mightyGameManager: {fileID: 1382038366}
   mightyStatesPreset: {fileID: 11400000, guid: e69308eb896f67d44a49c359123b2833, type: 2}
-  displayDebugInfo: 1
+  displayDebugInfo: 0
   onEnterGameStateStartedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -11338,7 +11338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11347,7 +11347,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a4ea32f18ed6a1c45a68b5c2fab5777d, type: 3}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -11358,24 +11358,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Nicolaus Copernicus is on the brink of formulating the Heliocentric model
-    of the universe, a turning point in Humanity''s understanding of the universe.
+  m_Text: 'Year 1655 was not gentle for Polish-Lithuanian Commonwealth. After Cossack-Polish
+    War lead by Bogdan Chmielnicki ravaged most of nowadays Ukraine and Lithuania
+    heavily incapacitating Commonwealth prowess, yet another threat loomed over the
+    Kingdom.
 
 
-    In
-    the far future, humans have expanded far beyond the Solar System, being the dominant
-    species in the Milky Way Galaxy. A rival species that developed Time Travel wants
-    to prevent this from happening, by eliminating the pivotal character in human''s
-    development - Copernicus.
+    The Deluge...
 
 
-    Luckily the future Human''s have discovered this
-    plot and sent you alongside the hit squad back in time - a highly advanced drone
-    capable of closing time portals and destroying enemy assassins. Your role is
-    to protect big C until he formulates the Heliocentric model, and opens humanity''s
-    eyes on the truth!
+    One would think that after the Treaty of Stuhmsdorf
+    the enmity between Swedish Crown and the Commonwealth would die down. Conversely,
+    this is a story of devious political moves, treachery and immense bravery of
+    the common folk.
 
-'
+
+    It is you who aids the Commonwealth of 1655 as a simple
+    Nobleman or a Noblewoman assembling their own army and participating in several
+    pivotal battles of this period.'
 --- !u!222 &1458933241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11938,7 +11938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11947,11 +11947,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a4ea32f18ed6a1c45a68b5c2fab5777d, type: 3}
-    m_FontSize: 33
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 43
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -12826,7 +12826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13890,7 +13890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13899,11 +13899,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a4ea32f18ed6a1c45a68b5c2fab5777d, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -16020,7 +16020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2068267162
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17164,7 +17164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3847232348823067073
 RectTransform:
   m_ObjectHideFlags: 0
