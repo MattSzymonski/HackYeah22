@@ -67,7 +67,7 @@ public class PotopManager : MonoBehaviour
                 IEnumerator Delay()
                 {
                     yield return new WaitForSeconds(10);
-                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Your troops have been captured by advancing Swedish army";
+                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Your troops have been captured by the advancing Swedish army";
                     Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Game Over";
                     MightyGameBrain.Instance.TransitToNextGameState("GameOver");
                 }

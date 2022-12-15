@@ -106,6 +106,11 @@ public class MainGameManager : MightyGameManager
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
         }
 
+        if (enteringGameState == "Tutorial")
+        {
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
+        }
+
         if (enteringGameState == "Village")
         {
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
@@ -123,6 +128,11 @@ public class MainGameManager : MightyGameManager
     public override IEnumerator OnGameStateExit(string exitingGameState, string enteringGameState)
     {
         if (exitingGameState == "MainMenu")
+        {
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, true));
+        }
+
+        if (exitingGameState == "Tutorial")
         {
             yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", true, true));
         }
@@ -155,7 +165,7 @@ public class MainGameManager : MightyGameManager
         // if standing on potopped node, trigger losing battle and die
         if (currentNode.invaded)
         {
-            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "You did not help polish troops besieged in Jasna Góra fortress";
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "You did not help the Polish troops besieged in Jasna GÃ³ra fortress";
             Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Game Over";
             MightyGameBrain.Instance.TransitToNextGameState("GameOver");
 

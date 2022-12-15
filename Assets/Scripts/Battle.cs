@@ -94,6 +94,32 @@ public class Battle : MonoBehaviour
             if (enemyUnitGroupsDead == enemyCards.Count)
             {
 
+                // Battle won, handle logic
+                player.gold += Random.Range(2, 5); // TODO: add a predefined amount of gold
+                battleWon = true;
+
+                for (int i = player.cards.Count - 1; i >= 0; i--)
+                {
+                    if (playerIndicesToRemove.Contains(i))
+                    {
+                        player.cards.RemoveAt(i);
+                    }
+
+                    //if (i==)
+                    //Card objToDestroy = player.cards[i];
+                    //Destroy(objToDestroy);
+                }
+
+                for (int i = enemyUnits.Count - 1; i >= 0; i--)
+                {
+                    Destroy(enemyUnits[i].gameObject);
+                }
+
+                for (int i = playerUnits.Count - 1; i >= 0; i--)
+                {
+                    Destroy(playerUnits[i].gameObject);
+                }
+                // Handle delay after victory and start transition to next state
                 StartCoroutine(BattleWon(battleDelayTime));
             }
         }
@@ -114,30 +140,6 @@ public class Battle : MonoBehaviour
         }
 
         MightyGameBrain.Instance.TransitToNextGameState("Map"); // TODO: add a battle won/lost screen with nr of gold displayed
-        player.gold += Random.Range(2, 5); // TODO: add a predefined amount of gold
-        battleWon = true;
-
-        for (int i = player.cards.Count - 1; i >= 0; i--)
-        {
-            if (playerIndicesToRemove.Contains(i))
-            {
-                player.cards.RemoveAt(i);
-            }
-
-            //if (i==)
-            //Card objToDestroy = player.cards[i];
-            //Destroy(objToDestroy);
-        }
-
-        for (int i = enemyUnits.Count - 1; i >= 0; i--)
-        {
-            Destroy(enemyUnits[i].gameObject);
-        }
-
-        for (int i = playerUnits.Count - 1; i >= 0; i--)
-        {
-            Destroy(playerUnits[i].gameObject);
-        }
 
     }
 

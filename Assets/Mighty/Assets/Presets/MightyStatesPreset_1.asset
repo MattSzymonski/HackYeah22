@@ -16,8 +16,8 @@ MonoBehaviour:
 
     Works with UI1
 
-    Contains 5 game
-    states: MainMenu, Settings, Playing, Pause, GameOver'
+    Contains 6 game
+    states: MainMenu, Settings, Playing, Pause, GameOver, TutorialPanel'
   startingGameStateName: MainMenu
   gameStates:
   - name: MainMenu
@@ -25,13 +25,13 @@ MonoBehaviour:
     enterGameStateNames:
     - GameOver
     exitGameStateNames:
-    - Map
+    - Tutorial
   - name: Map
     transitionStage: 1
     enterGameStateNames:
-    - MainMenu
     - Village
     - Battle
+    - Tutorial
     exitGameStateNames:
     - Village
     - Battle
@@ -56,3 +56,9 @@ MonoBehaviour:
     - Map
     exitGameStateNames:
     - MainMenu
+  - name: Tutorial
+    transitionStage: 1
+    enterGameStateNames:
+    - MainMenu
+    exitGameStateNames:
+    - Map
