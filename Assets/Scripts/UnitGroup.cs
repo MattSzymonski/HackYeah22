@@ -99,6 +99,6 @@ public class UnitGroup : MonoBehaviour
  
     public bool IsInCombat()
     {
-        return squadMembers.Any((x) => x.GetComponent<Unit>().inCombat == true);
+        return squadMembers.Any((x) => x.GetComponent<Unit>().inCombat == true && x.activeInHierarchy);
     }
 }
