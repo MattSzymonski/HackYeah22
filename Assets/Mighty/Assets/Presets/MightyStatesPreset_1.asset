@@ -42,6 +42,7 @@ MonoBehaviour:
     - Map
     exitGameStateNames:
     - Map
+    - GameOver
   - name: Battle
     transitionStage: 1
     enterGameStateNames:
@@ -54,6 +55,7 @@ MonoBehaviour:
     enterGameStateNames:
     - Battle
     - Map
+    - Village
     exitGameStateNames:
     - MainMenu
   - name: Tutorial

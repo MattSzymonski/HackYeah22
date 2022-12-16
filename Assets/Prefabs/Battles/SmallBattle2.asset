@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b1ffe503be94a52a7e6ea913dfecf1, type: 3}
   m_Name: SmallBattle2
   m_EditorClassIdentifier: 
-  name: SmallBattle1
+  name: SmallBattle2
   description: 
   goldRange: {x: 4, y: 8}
   enemyCards:

@@ -174,7 +174,13 @@ public class MainGameManager : MightyGameManager
         else
         {
             // win 
-            gameOverText.text = "Gratulacje!"; // TODO: display some ending info about potop
+            //gameOverText.text = "Gratulacje!"; // TODO: display some ending info about potop
+            // NODE SHOULD ALSO GET FLOODED, LOSE for now
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "You did not help the Polish troops besieged in Jasna Góra fortress";
+            Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Game Over";
+            MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+
+            Debug.Log("YOU LOST!");
         }
     }
 }

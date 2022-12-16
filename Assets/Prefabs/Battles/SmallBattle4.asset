@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b1ffe503be94a52a7e6ea913dfecf1, type: 3}
   m_Name: SmallBattle4
   m_EditorClassIdentifier: 
-  name: SmallBattle1
+  name: SmallBattle4
   description: 
   goldRange: {x: 4, y: 8}
   enemyCards:
   - {fileID: 11400000, guid: d154f4186675e44bdabdc19ea89c9845, type: 2}
-  - {fileID: 11400000, guid: b0ff57c389cc5449a9383939dec1d9df, type: 2}
   - {fileID: 11400000, guid: ec133ead3efec4049b7bef92f58d2c4a, type: 2}
   enemyPositions:
-  - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}

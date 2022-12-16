@@ -64,6 +64,7 @@ public class Battle : MonoBehaviour
                 {
                     Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "Jasna Góra fortress has fallen, the fate of the war seems to be sealed, Polish morale plummeted";
                     //Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Game Over";
+                    Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Game Over";
                     MightyGameBrain.Instance.TransitToNextGameState("GameOver");
 
                     return;

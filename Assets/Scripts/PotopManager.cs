@@ -48,13 +48,25 @@ public class PotopManager : MonoBehaviour
         ++currentWave;
         if (currentWave > maxWaves)
         {
-            mainGameManager.TriggerLosingBattle(advanceNode);
+            // If Very Hard losing battle implemented, uncomment this
+            //mainGameManager.TriggerLosingBattle(advanceNode);
+            Debug.Log("Player lost! node flooded!");
+            IEnumerator Delay()
+            {
+                yield return new WaitForSeconds(10);
+                Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = "You did not help the Polish troops besieged in Jasna Góra fortress on time!";
+                Mighty.MightyUIManager.Instance.GetUIPanel("GameOverPanel").gameObject.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Game Over";
+                MightyGameBrain.Instance.TransitToNextGameState("GameOver");
+            }
+
+            StartCoroutine(Delay());
             return;
         }
         // animations etc for transitions
         waves[currentWave].GetComponent<Animator>().SetBool("WaveStart", true);
         dottedWaves[currentWave].GetComponent<Animator>().SetBool("WaveStart", true);
         dottedWaves[currentWave - 1]?.GetComponent<Animator>().SetBool("WaveStart", false);
+        Debug.Log("WAVE " + currentWave);
 
         foreach (Transform node in nodeLevels[waveProgression].transform)
         {
@@ -64,6 +76,7 @@ public class PotopManager : MonoBehaviour
             // if player is in invaded node
             if (node == advanceNode.transform)
             {
+                Debug.Log("Player lost! node flooded!");
                 IEnumerator Delay()
                 {
                     yield return new WaitForSeconds(10);

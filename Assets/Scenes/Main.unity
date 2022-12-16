@@ -279,7 +279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -31.000183, y: 476}
+  m_AnchoredPosition: {x: -31.000122, y: 476}
   m_SizeDelta: {x: -1311.9004, y: -988.9104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &39330881
@@ -8887,8 +8887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardsToOffer:
-  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
-  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  - {fileID: 11400000, guid: b98f4338dc1564fa5b3133ee19ea5360, type: 2}
+  - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   cardsOffering: []
   place: {fileID: 11400000, guid: 8af4d201be0f5a14cb0763eff2a34f6c, type: 2}
@@ -10920,8 +10920,6 @@ MonoBehaviour:
   cardsToOffer:
   - {fileID: 11400000, guid: b98f4338dc1564fa5b3133ee19ea5360, type: 2}
   - {fileID: 11400000, guid: b98f4338dc1564fa5b3133ee19ea5360, type: 2}
-  - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
-  - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
   - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
   cardsOffering: []
   place: {fileID: 11400000, guid: da8aecd16ad093240b0644fa69385138, type: 2}
@@ -17812,10 +17810,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 441550910}
   - {fileID: 3847232348710821039}
   - {fileID: 1898728511}
   - {fileID: 736628436}
-  - {fileID: 441550910}
   - {fileID: 2068267162}
   - {fileID: 3847232348823067073}
   - {fileID: 3847232348805802584}

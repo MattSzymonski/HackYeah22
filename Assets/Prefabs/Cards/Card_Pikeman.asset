@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Pikemen
   description: 
   image: {fileID: 21300000, guid: ddfb10707876bea428e96e4f070e49ae, type: 3}
-  cost: 5
+  cost: 4
   unitPrefab: {fileID: 6262775410447495871, guid: 5078b8c8d0f69d448b343ec464b66702,
     type: 3}
