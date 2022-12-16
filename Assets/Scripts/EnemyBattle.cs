@@ -12,6 +12,7 @@ public class EnemyBattle : ScriptableObject
     [ResizableTextArea] public string description;
     //public Sprite image;
     //public int cost;
+    public Vector2Int goldRange = new Vector2Int(2, 5);
     public List<Card> enemyCards;
     public List<Vector3> enemyPositions;
 }

@@ -95,7 +95,7 @@ public class Battle : MonoBehaviour
             {
 
                 // Battle won, handle logic
-                player.gold += Random.Range(2, 5); // TODO: add a predefined amount of gold
+                player.gold += Random.Range(EnemyBattle.goldRange.x, EnemyBattle.goldRange.y); // TODO: add a predefined amount of gold
                 battleWon = true;
 
                 for (int i = player.cards.Count - 1; i >= 0; i--)
