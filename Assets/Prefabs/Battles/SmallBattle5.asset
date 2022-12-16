@@ -20,6 +20,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ec133ead3efec4049b7bef92f58d2c4a, type: 2}
   - {fileID: 11400000, guid: ec133ead3efec4049b7bef92f58d2c4a, type: 2}
   enemyPositions:
-  - {x: 5, y: 5, z: 5}
-  - {x: -6, y: 5, z: 5}
+  - {x: 5, y: 4, z: 5}
+  - {x: -6, y: 4, z: 5}
   - {x: -5, y: 3, z: 5}

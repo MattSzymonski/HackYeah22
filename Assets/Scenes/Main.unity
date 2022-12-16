@@ -15998,8 +15998,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsToOffer:
   - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
-  - {fileID: 11400000, guid: dbe69edfb95464caaa4910228b7601a1, type: 2}
-  - {fileID: 11400000, guid: c8dad9b8e9897764e9b8b7f2e09e2a8d, type: 2}
+  - {fileID: 11400000, guid: b98f4338dc1564fa5b3133ee19ea5360, type: 2}
+  - {fileID: 11400000, guid: b98f4338dc1564fa5b3133ee19ea5360, type: 2}
   cardsOffering: []
   place: {fileID: 11400000, guid: d05d5d26e1bb30c4bb589702a2082a57, type: 2}
   background: {fileID: 0}
