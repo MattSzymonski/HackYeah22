@@ -103,7 +103,7 @@ public class MainGameManager : MightyGameManager
         {
             Battle.SetActive(false);
             MainMap.SetActive(true);
-            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, false));
+            yield return StartCoroutine(MightyUIManager.Instance.ToggleUIPanel("TransitionPanel", false, true));
         }
 
         if (enteringGameState == "Tutorial")
