@@ -2,7 +2,7 @@
 
 ## Intro to game
 
-Year 1655 was not gentle for Polish-Lithuanian Commonwealth. After Cossack-Polish War lead by Bogdan Chmielnicki ravaged most of nowadays Ukraine and Lithuania heavily incapacitating Commonwealth prowess, yet another threat loomed over the Kingdom.
+Year 1655 was not gentle for Polish-Lithuanian Commonwealth. After Cossack-Polish War led by Bogdan Chmielnicki ravaged most of nowadays Ukraine and Lithuania heavily incapacitating Commonwealth prowess, yet another threat loomed over the Kingdom.
 
 The Deluge...
 
