@@ -1,11 +1,5 @@
 # HackYeah22: The Deluge
 
-## Awards
-
-<p align="center">
-  <img src="Media/Winner.png" img width=100%></br></br>
-</p>
-
 ## Intro to game
 
 Year 1655 was not gentle for Polish-Lithuanian Commonwealth. After Cossack-Polish War led by Bogdan Chmielnicki ravaged most of nowadays Ukraine and Lithuania heavily incapacitating Commonwealth prowess, yet another threat loomed over the Kingdom.
@@ -65,3 +59,8 @@ Mateusz Szymonski
 Jakub Duchniewicz
 Szymon Duchniewicz
 
+## Awards
+
+<p align="center">
+  <img src="Media/Winner.png" img width=100%></br></br>
+</p>
