@@ -1,5 +1,2 @@
 Some of the art created for this project was generated usng OpenAI DALLE.
-
-Additionaly those 2 resources were used:
-https://pixabay.com/music/build-up-scenes-perun-perunie-vox-by-izabela-szturemska-slavic-background-music-117592/
-https://www.shutterstock.com/image-photo/old-paper-parchment-scrolls-set-isolated-1458706370
+Music: https://pixabay.com/music/build-up-scenes-perun-perunie-vox-by-izabela-szturemska-slavic-background-music-117592/

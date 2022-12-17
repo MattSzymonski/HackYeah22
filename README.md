@@ -35,6 +35,16 @@ When enemies are nearby, units go towards them unless recalled by using a flag.
 
 Gameplay: https://www.youtube.com/watch?v=fdWl5yQ0ZK0
 
+<p align="center">
+  <img src="Media/1.png" img width=100%></br></br>
+  <img src="Media/2.png" img width=100%></br></br>
+  <img src="Media/3.png" img width=100%></br></br>
+  <img src="Media/4.png" img width=100%></br></br>
+  <img src="Media/5.png" img width=100%></br></br>
+  <img src="Media/6.png" img width=100%></br></br>
+  <img src="Media/7.png" img width=100%></br></br>
+</p>
+
 ![image](https://user-images.githubusercontent.com/26546660/203430363-719e83ee-bfe1-4445-80de-29b85b1b9141.png)
 <img width="1529" alt="Screenshot 2022-12-13 at 13 55 47" src="https://user-images.githubusercontent.com/26546660/207323677-ff707310-3f5b-48c8-830f-fb8a7d5a8ef1.png">
 
@@ -48,9 +58,7 @@ Gameplay: https://www.youtube.com/watch?v=fdWl5yQ0ZK0
 
 Some of the art created for this project was generated usng OpenAI DALLE.
 
-Additionaly those 2 resources were used:
-https://pixabay.com/music/build-up-scenes-perun-perunie-vox-by-izabela-szturemska-slavic-background-music-117592/
-https://www.shutterstock.com/image-photo/old-paper-parchment-scrolls-set-isolated-1458706370
+Music: https://pixabay.com/music/build-up-scenes-perun-perunie-vox-by-izabela-szturemska-slavic-background-music-117592/
 
 ## Developed by:
 
