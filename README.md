@@ -33,7 +33,7 @@ When enemies are nearby, units go towards them unless recalled by using a flag.
 
 ## Game preview
 
-Gameplay: https://www.youtube.com/watch?v=fdWl5yQ0ZK0
+Gameplay: https://youtu.be/E-iCmaZBLpg
 
 <p align="center">
   <img src="Media/1.png" img width=100%></br></br>
@@ -45,15 +45,6 @@ Gameplay: https://www.youtube.com/watch?v=fdWl5yQ0ZK0
   <img src="Media/7.png" img width=100%></br></br>
 </p>
 
-![image](https://user-images.githubusercontent.com/26546660/203430363-719e83ee-bfe1-4445-80de-29b85b1b9141.png)
-<img width="1529" alt="Screenshot 2022-12-13 at 13 55 47" src="https://user-images.githubusercontent.com/26546660/207323677-ff707310-3f5b-48c8-830f-fb8a7d5a8ef1.png">
-
-<img width="1526" alt="Screenshot 2022-12-13 at 13 56 47" src="https://user-images.githubusercontent.com/26546660/207323838-209adb8a-463f-4074-baf9-9186066b1413.png">
-
-<img width="1528" alt="Screenshot 2022-12-13 at 12 29 54" src="https://user-images.githubusercontent.com/26546660/207306456-ca868af3-31de-458b-9896-66aa122b5266.png">
-<img width="1529" alt="Screenshot 2022-12-13 at 12 26 53" src="https://user-images.githubusercontent.com/26546660/207306071-2dd13ad1-9fc1-4f9a-b563-0e86970786b8.png">
-<img width="1524" alt="Screenshot 2022-12-13 at 12 31 56" src="https://user-images.githubusercontent.com/26546660/207306738-a47e8ab6-9436-4664-8d16-8109c81f0eca.png">
-
 ## Resources used:
 
 Some of the art created for this project was generated usng OpenAI DALLE.
@@ -63,7 +54,6 @@ Music: https://pixabay.com/music/build-up-scenes-perun-perunie-vox-by-izabela-sz
 ## Developed by:
 
 *Sticky Piston Studios*
-
 
 Mateusz Szymonski
 Jakub Duchniewicz
